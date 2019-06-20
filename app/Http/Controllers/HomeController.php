@@ -24,7 +24,11 @@ class HomeController extends Controller
     public function index()
     {
         $form = view('form');
+        
+        $serviceList = \App\ServiceList::all();
+        $services = view('service_list', compact('serviceList'));
 
-        return view('home', compact('form'));
+
+        return view('home', compact('form', 'services'));
     }
 }

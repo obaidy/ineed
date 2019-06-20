@@ -16,6 +16,7 @@
 
                     @if(auth()->user()->role == 'user')
                     <h1>User</h1>
+                    <?= $services ?>
                     @elseif(auth()->user()->role == 'provider')
                     <h1>Provider</h1>
                     <?= $form ?>
