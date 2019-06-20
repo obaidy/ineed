@@ -18,6 +18,8 @@
                     <h1>User</h1>
                     @elseif(auth()->user()->role == 'provider')
                     <h1>Provider</h1>
+                    <?= $form ?>
+                        
                     @endif
 
                     You are logged in!
