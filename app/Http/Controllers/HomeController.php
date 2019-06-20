@@ -24,9 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(Auth::user()->role == 'provider'){
-            return redirect(action('ProviderController@index'));
-        }
+        //we commented this out to create a link to the dashboard from the provider section:
+        
+        // if(Auth::user()->role == 'provider'){
+        //     return redirect(action('ProviderController@index'));
+        // }
 
         $form = view('form');
 
