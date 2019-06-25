@@ -77,7 +77,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Ineed
                 </div>
                 <div>
                     @if (Route::has('register'))

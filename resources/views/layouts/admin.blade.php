@@ -90,12 +90,12 @@
       <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <div class="sidebar-heading">
+      <!-- <div class="sidebar-heading">
         Addons
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
           <span>Pages</span>
@@ -112,21 +112,21 @@
             <a class="collapse-item" href="blank.html">Blank Page</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
       <!-- Nav Item - Charts -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Charts</span></a>
-      </li>
+      </li> -->
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Tables</span></a>
-      </li>
+      </li>  -->
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -334,14 +334,14 @@
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
           </div>
 
           <!-- Content Row -->
           <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -355,10 +355,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -372,10 +372,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -398,10 +398,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -416,17 +416,17 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Content Row -->
 
-          <div class="row">
+          <!-- <div class="row"> -->
 
             <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
+            <!-- <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4"> -->
                 <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <!-- <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -440,21 +440,21 @@
                       <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- Card Body -->
-                <div class="card-body">
+                <!-- <div class="card-body">
                   <div class="chart-area">
                     <canvas id="myAreaChart"></canvas>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
+            <!-- <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <!-- <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -467,10 +467,10 @@
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                  </div>
-                </div>
+                  </div> -->
+                <!-- </div>  -->
                 <!-- Card Body -->
-                <div class="card-body">
+                <!-- <div class="card-body">
                   <div class="chart-pie pt-4 pb-2">
                     <canvas id="myPieChart"></canvas>
                   </div>
@@ -488,16 +488,16 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Content Row -->
-          <div class="row">
+          <!-- <div class="row"> -->
 
             <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
+            <!-- <div class="col-lg-6 mb-4"> -->
 
               <!-- Project Card Example -->
-              <div class="card shadow mb-4">
+              <!-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                 </div>
@@ -523,10 +523,10 @@
                     <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Color System -->
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-lg-6 mb-4">
                   <div class="card bg-primary text-white shadow">
                     <div class="card-body">
@@ -579,10 +579,10 @@
 
             </div>
 
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-4"> -->
 
               <!-- Illustrations -->
-              <div class="card shadow mb-4">
+              <!-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
                 </div>
@@ -593,10 +593,10 @@
                   <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!</p>
                   <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Approach -->
-              <div class="card shadow mb-4">
+              <!-- <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                 </div>
@@ -609,32 +609,100 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
         <!-- /.container-fluid -->
 
-      </div>
+      <!-- </div> -->
       <!-- End of Main Content -->
 
+
+    <div>
+      <form>
+       <fieldset>
+          <legend>Categories</legend>
+          <p>
+             
+             <select id = "myList">
+               <option value = "Baby-Sitter">Baby-Sitter</option>
+               <option value = "House-Keeping">House-Keeping</option>
+               <option value = "Gardner">Gardner</option>
+               <option value = "Personal-Trainer">Personal-Trainer</option>
+             </select>
+          </p>
+       </fieldset>
+
+       <form>
+       <fieldset>
+          <legend>Availability</legend>
+          <p>
+             
+             <select id = "myList">
+               <option value = "Monday">Monday</option>
+               <option value = "Tuseday">Tuseday</option>
+               <option value = "Wednesday">Wednesday</option>
+               <option value = "Thursday">Thursday</option>
+               <option value = "Friday">Friday</option>
+               <option value = "Saturday">Saturday</option>
+               <option value = "Sunday">Sunday</option>
+                              
+             </select>
+          </p>
+       </fieldset>
+      </form>
+
+      <form>
+       <fieldset>
+          <legend>When</legend>
+          <p>
+             <select id = "myList">
+               <option value = "Morning">Morning</option>
+               <option value = "Afternoon">Afternoon</option>
+               <option value = "Evening">Evening</option>
+               <option value = "All-Day">All-Day</option>
+
+                              
+             </select>
+          </p>
+       </fieldset>
+      </form>
+
+        <br> Descriptions: 
+          <form action="/action_page.php">
+      <textarea name="message" rows="10" cols="30"></textarea>
+      <br>
+      <input type="submit">
+    </form>
+    </div>
+       
+
+        
+
+
+
+
+
+
+
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
+      <!-- <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Ineed 2019</span>
           </div>
         </div>
-      </footer>
+      </footer> -->
       <!-- End of Footer -->
 
-    </div>
+    <!-- </div> -->
     <!-- End of Content Wrapper -->
 
-  </div>
+  <!-- </div> -->
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
+  <!-- <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
-  </a>
+  </a> -->
 
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
