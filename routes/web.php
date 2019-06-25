@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/services/search', 'SearchController@index');
+Route::get('/services/search/{service}', 'SearchController@index');

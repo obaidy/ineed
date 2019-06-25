@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateListOfServices extends Migration
+class CreateAvailabilityTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateListOfServices extends Migration
      */
     public function up()
     {
-        Schema::create('list_of_services', function (Blueprint $table) {
+        Schema::create('availability', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('image');
-            $table->string('slug');
+            $table->date('day')->nullable();
+            $table->time('hour')->nullable();
+            $table->boolean('is_available');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateListOfServices extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('list_of_services');
+        Schema::dropIfExists('availability');
     }
 }

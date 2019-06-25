@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReviewsTable extends Migration
+class CreateServiceRequestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,16 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
+        Schema::create('service_requests', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('rating');
-            $table->text('text')->nullable();
             $table->integer('user_id');
             $table->integer('provider_id');
+            $table->date('service_date');
+            $table->time('service_time');
+            $table->string('service_location');
+            $table->integer('service_length');
+            $table->string('description');
+            $table->boolean('is_accepted')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +34,6 @@ class CreateReviewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('service_requests');
     }
 }
