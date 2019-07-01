@@ -22,6 +22,7 @@
                     <?= $form ?>
                         
                     @endif
+                    <?= $services ?>
 
                     You are logged in!
                 </div>

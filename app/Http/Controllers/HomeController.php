@@ -25,7 +25,7 @@ class HomeController extends Controller
     {
         $form = view('form');
         
-        $serviceList = \App\Categorie::all();
+        $serviceList = \App\Category::all();
         $services = view('service_list', compact('serviceList'));
 
 
