@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //we commented this out to create a link to the dashboard from the provider section:
+        
+        // if(Auth::user()->role == 'provider'){
+        //     return redirect(action('ProviderController@index'));
+        // }
+
         $form = view('form');
         
         $serviceList = \App\Category::all();

@@ -19,12 +19,13 @@
                     <?= $services ?>
                     @elseif(auth()->user()->role == 'provider')
                     <h1>Provider</h1>
-                    <?= $form ?>
+                  
+                    <a href="/provider">Dashboard</a>
                         
                     @endif
                     <?= $services ?>
 
-                    You are logged in!
+                    
                 </div>
             </div>
         </div>
