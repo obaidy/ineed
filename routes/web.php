@@ -19,8 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-<<<<<<< HEAD
 Route::get('/search/{service}', 'SearchController@index');
-=======
 Route::get('/provider', 'ProviderController@index');
->>>>>>> master
