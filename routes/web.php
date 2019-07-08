@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/search/{service}', 'SearchController@index');
 Route::get('/provider', 'ProviderController@index');
+Route::post('/form', 'ProviderController@storeInfo');

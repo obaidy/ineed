@@ -21,6 +21,7 @@
                     <h1>Provider</h1>
                   
                     <a href="/provider">Dashboard</a>
+                    <?= $form ?>
                         
                     @endif
                     <?= $services ?>

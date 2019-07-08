@@ -1,5 +1,7 @@
-<form action="">
-    <input type="text">
-    <textarea name="" id="" cols="30" rows="10">Description</textarea>
+<form action="" method='post'>
+<?= csrf_field() ?>
+    <input type="text" name="name" value='Name'>
+    <textarea name="description" id="" cols="30" rows="30">About You</textarea>
+    <input type="submit" value="submit">
     
 </form>
