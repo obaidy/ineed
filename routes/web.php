@@ -18,7 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+//search by category
 Route::get('/search/{service}', 'SearchController@index');
+//profile of provider
+Route::get('/providers/{id?}', 'DisplayProfileController@index');
+
 Route::get('/provider', 'ProviderController@index');
-Route::post('/form', 'ProviderController@storeInfo');
+
+//edit Provider Information
+Route::get('/form', 'ProviderInfo@index');
+Route::post('/form', 'ProviderInfo@store');
+
+

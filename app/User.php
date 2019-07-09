@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role'
+        'name', 'email', 'password', 'role', 'profile_image'
     ];
 
     /**
@@ -40,5 +40,15 @@ class User extends Authenticatable
     public function category()
     {
         return $this->belongsTo('App\Category', 'id', 'category_id');
+    }
+    
+    public function availability()
+    {
+        return $this->hasMany('App\Availability');
+    }
+
+    public function getImageAttribute()
+    {
+        return $this->profile_image;
     }
 }

@@ -21,7 +21,7 @@
                     <h1>Provider</h1>
                   
                     <a href="/provider">Dashboard</a>
-                    <?= $form ?>
+                    <a href="{{ action('ProviderInfo@index') }}">Edit</a>
                         
                     @endif
                     <?= $services ?>

@@ -30,12 +30,21 @@ class HomeController extends Controller
         //     return redirect(action('ProviderController@index'));
         // }
 
-        $form = view('form');
         
         $serviceList = \App\Category::all();
         $services = view('service_list', compact('serviceList'));
 
 
-        return view('home', compact('form', 'services'));
+        return view('home', compact('services'));
+    }
+    public function update(Request $request)
+    {
+        $id = \Auth::user()->id;
+        $provider = \App\User::where('id', $id)->first();
+        $provider->name = $request->name;
+        $provider->description = $request->description;
+        $provider->
+        $provider->save();
+
     }
 }

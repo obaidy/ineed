@@ -1,11 +1,12 @@
 @extends('layouts.app')
-
+{{-- The list of available providers in a category --}}
 @section('content')
     
-    <div>{{ $service->name }}</div>
+    <div>{{ $serviceObject->name }}s</div>
 
     @foreach($providers as $provider)
-        <div>{{ $provider->name}}</div>
+    {{var_dump($provider->id) }}
+        <a href="{{ action('DisplayProfileController@index', $provider->id) }}">{{ $provider->name}}</div>
 
     @endforeach
 
