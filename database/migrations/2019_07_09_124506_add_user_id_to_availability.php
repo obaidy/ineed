@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReviewsTable extends Migration
+class AddUserIdToAvailability extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('rating');
-            $table->text('text')->nullable();
+        Schema::table('availability', function (Blueprint $table) {
             $table->integer('user_id');
-            $table->integer('provider_id');
-            $table->timestamps();
         });
     }
 
@@ -30,6 +25,8 @@ class CreateReviewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviews');
+        Schema::table('availability', function (Blueprint $table) {
+            //
+        });
     }
 }
