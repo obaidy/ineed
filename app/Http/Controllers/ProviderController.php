@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-namespace App;
+use App;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +15,7 @@ class ProviderController extends Controller
 
     public function index(){
         $user = Auth::user();
-        //$form_view = view('form')
+        
         return view('layouts.admin', compact('user'));
     }
 

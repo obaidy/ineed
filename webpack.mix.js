@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix")
 
 /*
  |--------------------------------------------------------------------------
@@ -11,6 +11,24 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/admin/sb-admin-2.scss', 'public/css/admin.css')
-    .sass('resources/sass/app.scss', 'public/css');
+if (!mix.inProduction()) {
+    mix.webpackConfig({
+        devtool: "source-map"
+    }).sourceMaps()
+}
+
+mix
+    // .js('resources/js/app.js', 'public/js')
+    // .sass('resources/sass/app.scss', 'public/css')
+    .react("resources/js/image-manager/index.js", "public/js/image-manager.js")
+
+    .browserSync({
+        host: "www.laravel-react.test",
+        port: 3000,
+        proxy: {
+            target: "laravel-react.test:8080"
+        }
+    })
+
+//add versioning
+mix.version()
