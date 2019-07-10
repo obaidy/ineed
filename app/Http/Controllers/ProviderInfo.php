@@ -15,6 +15,7 @@ class ProviderInfo extends Controller
         $user = \Auth::user();
         //plucks only days (and hours) available from availability of user, and puts in array
         $days_available = Availability::where('user_id', '=', $user->id)->pluck('day');
+        
         $hours_available = Availability::where('user_id', '=', $user->id)->pluck('hour');
         
         //put into format of checkbox value
@@ -55,7 +56,7 @@ class ProviderInfo extends Controller
         //go through each checked box and save it to the database.
         foreach ($request->avail as $free) {
             //if availability is new, create new one.
-            if($free){
+            //if($free){
                 //use regex to take out day and time.
             $new_time = new Availability();
             //next time: figure out regular expression;
@@ -65,7 +66,7 @@ class ProviderInfo extends Controller
             $new_time->is_available = true;
             $new_time->user_id = $id;
             $new_time->save();
-            }
+            
             
         }
 
