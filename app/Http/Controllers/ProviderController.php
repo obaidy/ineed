@@ -6,6 +6,7 @@ use App\Availability;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class ProviderController extends Controller
 {
     public function __construct()

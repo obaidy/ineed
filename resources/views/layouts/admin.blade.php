@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -634,12 +634,12 @@
               </select>
             
              
-             {{-- <select id = "myList">
+             <select id = "myList">
                <option value = "Baby-Sitter">Baby-Sitter</option>
                <option value = "House-Keeping">House-Keeping</option>
                <option value = "Gardner">Gardner</option>
                <option value = "Personal-Trainer">Personal-Trainer</option>
-             </select> --}}
+             </select> 
           </p>
        </fieldset>
 
