@@ -16,9 +16,9 @@
     <form action="" method='post'>
         @csrf
         <span>Date: </span>
-        <input type="text" name="service_date" value="">
+        <input type="date" name="service_date" value="">
         <span>Time: </span>
-        <input type="text" name="service_time" value="">
+        <input type="time" name="service_time" value="">
         <span>Location: </span>
         <input type="text" name="service_location" value="Street">
         <input type="text" name="house_number" value="House Number">

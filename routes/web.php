@@ -26,9 +26,10 @@ Route::get('/providers/{id?}', 'DisplayProfileController@index');
 Route::get('/provider', 'ProviderController@index');
 Route::post('/provider', 'ProviderController@store');
 
-//edit Provider Information
+//edit Provider Information or accept/deny request
 Route::get('/form', 'ProviderInfo@index');
 Route::post('/form', 'ProviderInfo@store');
 
 //submit request form
 Route::post('/providers/{id}', 'DisplayProfileController@store_request');
+

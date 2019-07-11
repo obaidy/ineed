@@ -17,6 +17,7 @@ class DisplayProfileController extends Controller
 
     public function store_request(Request $request, $provider_id)
     {
+        //dd($request);
         $user_id = \Auth::user()->id;
         $user_name = \Auth::user()->name;
         $provider = \App\User::where('id', $provider_id)->first();
@@ -35,4 +36,5 @@ class DisplayProfileController extends Controller
 
         return redirect(action('HomeController@index'));
     }
+
 }
