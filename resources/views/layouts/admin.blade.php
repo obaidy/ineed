@@ -650,28 +650,29 @@
               <div>Confirm your weekly availability</div>
               @foreach ($days_of_week as $day)
                   <span>{{$day}}</span>
-                  
+                  <select class="form-check form-check-inline">
                   @foreach ($times_of_day as $time)
                       {{-- availability iterator. --}}
                       {{-- Checks if day and time is in array provided --}}
                       @if (in_array($day."-".$time, $full_availability))
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" checked name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
+                          
+                            <option class="form-check-input" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
                             <label class= "form-check-label"for="{{$day}}-{{$time}}">{{ $time }}</label>
                         
-                          </div>
+                          
                       @else
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
+                      
+                          <option class="form-check-input" type="checkbox" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
                           <label class= "form-check-label"for="{{$day}}-{{$time}}">{{ $time }}</label>
                       
-                        </div>
+                        
                       @endif
+                      
                   
                     
                           
                   @endforeach
-                  
+                  </select>
                   <br>
               @endforeach
               <fieldset>
