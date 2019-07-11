@@ -732,13 +732,19 @@
         @foreach ($new_requests as $new_request)
             <div class="requester">{{$new_request->user_name}}</div>
               @php
-
-                  $formatted_date = date('D, j M', strtotime($new_request->service_date));
+                  $unix_time = strtotime($new_request->service_date.' '.$new_request->service_time);
+                  $formatted_date = date('D, j M', $unix_time);
+                  $formatted_time = date("G:i", $unix_time);
               @endphp
             <div class="date">{{$formatted_date}}</div>
-            <div class="time">{{$new_request->service_time}}</div>
+            <div class="time">{{$formatted_time}}</div>
             <div class="location">{{$new_request->service_location}} {{$new_request->house_number}}</div>
             <div class="description">{{$new_request->description}}</div>
+            <form action="post">
+              <input type="submit" name='is_accepted' value="Accept">
+              <input type="submit" name='is_accepted' value="Deny">
+
+            </form>
         @endforeach
       </div>
       <div class="upcoming"></div>
