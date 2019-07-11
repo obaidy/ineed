@@ -1,0 +1,98 @@
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url(/img/blue-background.jpg);
+    background-position: center;
+    background-position-y: -15px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px;
+  }
+
+  /* Top */
+
+  
+
+  /* Logo */
+
+  .logo>img{
+      width: 70px;
+      float: left;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+/* NavBar */
+  #menu-nav {
+    max-width: 900px;
+    margin: -5px auto;
+    background-color: #639bdd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  #navigation-bar ul {
+    margin: 0px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  #navigation-bar li {
+    float: left;
+    width: 80%;
+  }
+  #navigation-bar li:hover a::before {
+    right: 0;
+    left: 0;
+  }
+  #navigation-bar a {
+    color: #000000;
+    font-size: 22px;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  #navigation-bar a:hover {
+    color: #ffffff;
+  }
+  #navigation-bar a::before {
+    content: "";
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  #navigation-bar a:hover::before {
+    right: 0;
+    left: 0;
+  }
+  
+  li {
+      list-style: none;
+  }
+
+  /* Description */
+  .Description{
+      background-image: linear-gradient(to left, rgba(255,0,0,0), #fa6c8f);
+      /* background-color: #f37a98; */
+      width: 100%;
+      margin-top: 90px;
+      height: 70px;
+  }
+  .Description>h1{
+      color: white;
+      font-family: 'Dancing Script', cursive;
+      font-size: 35px;
+      text-align: center;
+      padding-top: 15px;
+      
+  }

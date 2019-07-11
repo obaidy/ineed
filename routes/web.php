@@ -12,10 +12,12 @@
  */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/homepage/home'); //Changed for the new blade
 });
 
 Auth::routes();
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 //search by category
