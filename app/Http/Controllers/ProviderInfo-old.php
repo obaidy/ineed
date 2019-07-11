@@ -25,7 +25,8 @@ class ProviderInfo extends Controller
         }
 
         $categories = \App\Category::all();
-
+        $new_requests = \App\Service_Request::where('provider_id', $user->id)->where('is_accepted', null)->get();
+        dd($new_requests);
         return view('form', compact('categories', 'user', 'full_availability', 'days_of_week', "times_of_day"));
     }
 
@@ -54,7 +55,7 @@ class ProviderInfo extends Controller
         //     }
         // }
         //go through each checked box and save it to the database.
-        //get the past availability of the provider. 
+        //get the past availability of the provider.
         $days_available = Availability::where('user_id', '=', $id)->pluck('day');
         $hours_available = Availability::where('user_id', '=', $id)->pluck('hour');
 
@@ -64,7 +65,7 @@ class ProviderInfo extends Controller
             $full_availability[] = $day_available . '-' . $hours_available[$key];
         }
 
-        //delete times provider is no longer available. 
+        //delete times provider is no longer available.
         foreach ($full_availability as $old_avail) {
             //if availability is new, create new one.
             if (!in_array($old_avail, $request->avail)) {
@@ -74,8 +75,7 @@ class ProviderInfo extends Controller
                 $old_day = $matches[1];
                 $old_hour = $matches[2];
                 $to_delete = Availability::where('day', $old_day)->where('hour', $old_hour)->where('user_id', $id)->delete();
-                
-                
+
             }
         }
 
@@ -94,10 +94,8 @@ class ProviderInfo extends Controller
                 $new_time->save();
             }
         }
-        //delete times provider is no longer available. 
-        
+        //delete times provider is no longer available.
 
-        $provider->name = $request->name;
         $provider->description = $request->description;
         $provider->category_id = $request->category;
         $provider->save();

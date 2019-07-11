@@ -617,25 +617,66 @@
 
 
     <div>
-      <form>
+      <form action="" method="post">
+          <?= csrf_field() ?>
        <fieldset>
           <legend>Categories</legend>
           <p>
+              <select id = 'myList' name="category">
+      
+                  @foreach ($categories as $category)
+                      @if ($user->category_id == $category->id)
+                          <option selected value="{{ $category->id }}">{{ $category->name }}</option>
+                      @else
+                          <option value="{{ $category->id }}">{{ $category->name }}</option>
+                      @endif
+                  @endforeach
+              </select>
+            
              
-             <select id = "myList">
+             {{-- <select id = "myList">
                <option value = "Baby-Sitter">Baby-Sitter</option>
                <option value = "House-Keeping">House-Keeping</option>
                <option value = "Gardner">Gardner</option>
                <option value = "Personal-Trainer">Personal-Trainer</option>
-             </select>
+             </select> --}}
           </p>
        </fieldset>
 
-       <form>
+    
        <fieldset>
           <legend>Availability</legend>
-          <p>
-             
+          
+              <div>Confirm your weekly availability</div>
+              @foreach ($days_of_week as $day)
+                  <span>{{$day}}</span>
+                  
+                  @foreach ($times_of_day as $time)
+                      {{-- availability iterator. --}}
+                      {{-- Checks if day and time is in array provided --}}
+                      @if (in_array($day."-".$time, $full_availability))
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" checked name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
+                            <label class= "form-check-label"for="{{$day}}-{{$time}}">{{ $time }}</label>
+                        
+                          </div>
+                      @else
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
+                          <label class= "form-check-label"for="{{$day}}-{{$time}}">{{ $time }}</label>
+                      
+                        </div>
+                      @endif
+                  
+                    
+                          
+                  @endforeach
+                  
+                  <br>
+              @endforeach
+              <fieldset>
+                <legend>Availability</legend>
+                <p> 
              <select id = "myList">
                <option value = "Monday">Monday</option>
                <option value = "Tuseday">Tuseday</option>
@@ -646,32 +687,61 @@
                <option value = "Sunday">Sunday</option>
                               
              </select>
-          </p>
+            </p>
+          
        </fieldset>
-      </form>
+       <form>
+        <fieldset>
+           <legend>When</legend>
+           <p>
+              <select id = "myList">
+                <option value = "Morning">Morning</option>
+                <option value = "Afternoon">Afternoon</option>
+                <option value = "Evening">Evening</option>
+                <option value = "All-Day">All-Day</option>
+ 
+                               
+              </select>
+           </p>
+        </fieldset>
+       </form>
+      <fieldset>
 
-      <form>
-       <fieldset>
-          <legend>When</legend>
-          <p>
-             <select id = "myList">
-               <option value = "Morning">Morning</option>
-               <option value = "Afternoon">Afternoon</option>
-               <option value = "Evening">Evening</option>
-               <option value = "All-Day">All-Day</option>
-
-                              
-             </select>
-          </p>
-       </fieldset>
-      </form>
-
-        <br> Descriptions: 
-          <form action="/action_page.php">
-      <textarea name="message" rows="3" cols="30"></textarea>
-      <br>
-      <input type="submit">
+          {{-- <input type="text" name="name" value='{{$user->name}}'> --}}
+          <div>Add a description of yourself and your offer.</div>
+          <textarea name="description" id="" cols="30" rows="5">{{$user->description}}</textarea>
+          
+      </fieldset>
+      
+ 
+         {{-- <br> Descriptions: 
+           <form action="/action_page.php">
+       <textarea name="message" rows="3" cols="30"></textarea>
+       <br>
+       <input type="submit">
+     </form>
+     </div>
+        --}}
+      
+      <input type="submit" value="submit">
     </form>
+    
+    <div class="jobs">
+      <div class="new-request">
+        <div>New Requests</div>
+        @foreach ($new_requests as $new_request)
+            <div class="requester">{{$new_request->user_name}}</div>
+              @php
+
+                  $formatted_date = date('D, j M', strtotime($new_request->service_date));
+              @endphp
+            <div class="date">{{$formatted_date}}</div>
+            <div class="time">{{$new_request->service_time}}</div>
+            <div class="location">{{$new_request->service_location}} {{$new_request->house_number}}</div>
+            <div class="description">{{$new_request->description}}</div>
+        @endforeach
+      </div>
+      <div class="upcoming"></div>
     </div>
        
 

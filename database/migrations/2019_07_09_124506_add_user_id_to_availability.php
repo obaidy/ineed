@@ -14,7 +14,7 @@ class AddUserIdToAvailability extends Migration
     public function up()
     {
         Schema::table('availability', function (Blueprint $table) {
-            $table->integer('user_id');
+            //$table->integer('user_id');
         });
     }
 

@@ -37,14 +37,5 @@ class HomeController extends Controller
 
         return view('home', compact('services'));
     }
-    public function update(Request $request)
-    {
-        $id = \Auth::user()->id;
-        $provider = \App\User::where('id', $id)->first();
-        $provider->name = $request->name;
-        $provider->description = $request->description;
-        $provider->
-        $provider->save();
-
-    }
+    
 }
