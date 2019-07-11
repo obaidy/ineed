@@ -29,7 +29,7 @@
     </div>
     <!-- Description -->
     <div class="Description">
-        <h1>An easier and safer way to find a trusted worker for everything you need around the house.</h1>
+        <h1>An easier and safer way to find trusted workers for everything you need around the house.</h1>
     </div>
 </body>
 </html>
