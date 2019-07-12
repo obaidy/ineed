@@ -103,3 +103,70 @@ body {
       padding-top: 15px;
       
   }
+
+/* Review Title */
+
+.review-title{
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+}
+
+.review-title>h3{
+  color: rgb(255, 255, 255);
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+  border-radius: 15px;
+  
+
+  
+}
+
+  /* Carousel */
+
+#reviews{
+  
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona{
+  
+  background-color: rgba(255, 255, 255, 0.856);
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  margin: 0px auto;
+  border: 1px white solid;
+  border-radius: 15px;
+  align-items: center;
+  
+ 
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona>.Guys{
+  margin-left: 25px;
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona>.Guys>img{
+    width: 150px;
+    border-radius: 50%;
+    align-self: right;
+    margin-top: 20px;
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona>.Guys>h1{
+  align-self: center;
+  font-size: 24px;
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona>p{
+  text-align: left;
+  font-size: 22px;
+  margin-left: 60px;
+  margin-right: 15px;
+}
