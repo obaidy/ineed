@@ -34,3 +34,7 @@ Route::post('/form', 'ProviderInfo@store');
 
 //submit request form
 Route::post('/providers/{id}', 'DisplayProfileController@store_request');
+
+//about us route
+
+Route::get('/about', 'AboutController@index');
