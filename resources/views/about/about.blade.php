@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="Top">
-       
+    
         <!-- Navbar -->
         <div id="menu-nav">
             <div id="navigation-bar">
@@ -23,6 +23,20 @@
                 </ul>
             </div>
         </div>
+        <div class="login">
+            <a href="#"><img src="./img/login.png" alt=""></a>
+        </div>
+        <div class="container">
+            <p><span class="abouttxt">
+            Welcome to Ineed, your number one source for all Services. We're dedicated to providing you the very best of quality of services, with an emphasis on daily needed services.<br>
+            Founded in 2019 by [founder name], Ineed has come a long way from its beginnings in [starting location].<br> When [founder name] first started out, [his/her/their] passion for [brand message - e.g. "eco-friendly cleaning products"] drove them to start    their own business.  <br>  
+             We hope you enjoy our products as much as we enjoy offering them to you.<br> If you have any questions or comments, please don't hesitate to contact us.<br>
+             Sincerely,<br>
+             [founder name]
+             </span>
+            </p>
+        </div>
+    </div>
     </div>
 </body>
 </html>
