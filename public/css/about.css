@@ -23,7 +23,8 @@ body {
 }
 
 .abouttxt {
-    background-color: yellow;
+    background-color:black;
+    opacity: 0.5;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
