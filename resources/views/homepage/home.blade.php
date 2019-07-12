@@ -13,7 +13,8 @@
     <div class="Top">
         <!-- Logo -->
         <div class="logo">
-                <img src="./img/logo.png" alt="">
+                
+                <a href="/"><img src="./img/logo.png" alt=""></a>
         </div>
         <!-- Navbar -->
         <div id="menu-nav">
@@ -25,6 +26,10 @@
                     <li><a href="#"><i class="fa fa-book"></i><span>Contact</span></a></li>
                 </ul>
             </div>
+        </div>
+        <!-- Log in -->
+        <div class="login">
+            <a href="#"><img src="./img/login.png" alt=""></a>
         </div>
     </div>
     <!-- Description -->
