@@ -134,6 +134,10 @@ body {
   
 }
 
+#reviews>.carousel-inner>.carousel-item{
+  height: 230px;
+}
+
 #reviews>.carousel-inner>.carousel-item>.persona{
   
   background-color: rgba(255, 255, 255, 0.856);
@@ -169,4 +173,70 @@ body {
   font-size: 22px;
   margin-left: 60px;
   margin-right: 15px;
+  max-height: 300px;
+}
+
+/* Register */
+
+.registerTitle{
+  ;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.registerTitle>h3{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  width: 300px;
+  margin: auto;
+
+}
+
+.register{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0.897);
+  width: 800px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+.register>a{
+  text-decoration: none;
+}
+
+.register>a>.option{
+  background-color: rgba(0, 0, 0, 0.568);
+  margin: 30px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.register>a>.option>img{
+  width: 170px;
+  align-content: center;
+  margin-left: 40px;
+}
+
+.register>a>.option>p{
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+
+}
+
+.register>a>.option>h4{
+  color: white;
+  text-align: center;
+}
+
+
+/* Footer */
+footer{
+  background-color: rgba(78, 78, 78, 0.925);
+  color: white;
 }
