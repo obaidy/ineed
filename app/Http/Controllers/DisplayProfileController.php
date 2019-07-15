@@ -18,11 +18,11 @@ class DisplayProfileController extends Controller
     public function store_request(Request $request, $provider_id)
     {
         //dd($request);
-        $user_id = \Auth::user()->id;
+        $user = \Auth::user();
         $user_name = \Auth::user()->name;
         $provider = \App\User::where('id', $provider_id)->first();
         $service_request = new Service_Request();
-        $service_request->user_id = $user_id;
+        $service_request->user_id = $user->id;
         $service_request->provider_id = $provider_id;
         $service_request->user_name = $user_name;
         $service_request->provider_name = $provider->name;
@@ -32,6 +32,12 @@ class DisplayProfileController extends Controller
         $service_request->house_number = $request->house_number;
         $service_request->service_length = $request->service_length;
         $service_request->description = $request->description;
+        $service_request->user_email = $user->email;
+        $service_request->provider_email = $provider->email;
+        $service_request->user_phone = $user->telephone_number;
+        $service_request->provider_phone = $provider->telephone_number;
+
+
         $service_request->save();
 
         return redirect(action('HomeController@index'));

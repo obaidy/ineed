@@ -751,17 +751,19 @@
       </div>
       <div class="upcoming">
         <div>Upcoming Jobs</div>
-        @foreach ($new_requests as $new_request)
-            <div class="requester">{{$new_request->user_name}}</div>
+        @foreach ($upcoming_requests as $upcoming_request)
+            <div class="requester">{{$upcoming_request->user_name}}</div>
               @php
-                  $unix_time = strtotime($new_request->service_date.' '.$new_request->service_time);
+                  $unix_time = strtotime($upcoming_request->service_date.' '.$upcoming_request->service_time);
                   $formatted_date = date('D, j M', $unix_time);
                   $formatted_time = date("G:i", $unix_time);
               @endphp
             <div class="date">{{$formatted_date}}</div>
             <div class="time">{{$formatted_time}}</div>
-            <div class="location">{{$new_request->service_location}} {{$new_request->house_number}}</div>
-            <div class="description">{{$new_request->description}}</div>
+            <div class="location">{{$upcoming_request->service_location}} {{$upcoming_request->house_number}}</div>
+            <div class="description">{{$upcoming_request->description}}</div>
+            <div class="email">{{$upcoming_request->user_email}}</div>
+            <div class="telephone">{{$upcoming_request->user_phone}}</div>
           
         @endforeach
 

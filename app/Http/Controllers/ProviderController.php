@@ -16,7 +16,7 @@ class ProviderController extends Controller
     public function index()
     {
         $days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", 'Friday', "Saturday", "Sunday"];
-        $times_of_day = ["Early Morning", "Late Morning", 'Early Afternoon', "Late Afternoon", "Early Evening", "Late Evening"];
+        $times_of_day = ["Morning", 'Afternoon', "Evening", "All Day"];
 
         $user = \Auth::user();
         //plucks only days (and hours) available from availability of user, and puts in array
@@ -33,7 +33,7 @@ class ProviderController extends Controller
         $upcoming_requests = \App\Service_Request::where('provider_id', $user->id)->where('is_accepted', true)->get();
         $categories = \App\Category::all();
         //switched from view('form)
-        return view('layouts.admin', compact('categories', 'user', 'full_availability', 'days_of_week', "times_of_day", "new_requests"));
+        return view('layouts.admin', compact('categories', 'user', 'full_availability', 'days_of_week', "times_of_day", "new_requests", 'upcoming_requests'));
 
         //return view('layouts.admin', compact('user'));
     }
@@ -42,7 +42,7 @@ class ProviderController extends Controller
     {
         if ($request->has('category')) {
             $days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", 'Friday', "Saturday", "Sunday"];
-            $times_of_day = ["Early Morning", "Late Morning", 'Early Afternoon', "Late Afternoon", "Early Evening", "Late Evening"];
+            $times_of_day = ["Morning", 'Afternoon', "Evening", "All Day"];
 
             $user = \Auth::user();
             $id = \Auth::user()->id;
@@ -99,7 +99,7 @@ class ProviderController extends Controller
             $service_id = \App\Service_Request::where('id', $request->service_id)->first();
             if ($request->is_accepted === "Accept") {
                 $service_id->is_accepted = true;
-                
+
             } else {
                 $service_id->is_accepted = false;
             }
