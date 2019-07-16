@@ -634,12 +634,7 @@
               </select>
             
              
-             <select id = "myList">
-               <option value = "Baby-Sitter">Baby-Sitter</option>
-               <option value = "House-Keeping">House-Keeping</option>
-               <option value = "Gardner">Gardner</option>
-               <option value = "Personal-Trainer">Personal-Trainer</option>
-             </select> 
+            
           </p>
        </fieldset>
 
@@ -710,7 +705,7 @@
 
           {{-- <input type="text" name="name" value='{{$user->name}}'> --}}
           <div>Add a description of yourself and your offer.</div>
-          <textarea name="description" id="" cols="30" rows="5">{{$user->description}}</textarea>
+          <textarea class="form-group" name="description" id="" cols="30" rows="5">{{$user->description}}</textarea>
           
       </fieldset>
       
@@ -750,7 +745,7 @@
             </form>
         @endforeach
       </div>
-      <div class="upcoming">
+      <div id='myList' class="upcoming">
         <div>Upcoming Jobs</div>
         @foreach ($upcoming_requests as $upcoming_request)
             <div class="requester">{{$upcoming_request->user_name}}</div>
