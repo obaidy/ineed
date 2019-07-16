@@ -26,7 +26,7 @@
             <div id="navigation-bar">
                 <ul>
                     <li><a href="/"><i class="fa fa-home"></i><span>Home</span></a></li>
-                    <li><a href="#"><i class="fa fa-handshake"></i><span>Categories</span></a></li>
+                    <li><a href="/categ"><i class="fa fa-handshake"></i><span>Categories</span></a></li>
                     <li><a href="/about"><i class="fa fa-user"></i><span>About</span></a></li>
                     <li><a href="#"><i class="fa fa-book"></i><span>Contact</span></a></li>
                 </ul>

@@ -42,3 +42,5 @@ Route::post('jobs', 'UserRequestController@review');
 //about us route
 
 Route::get('/about', 'AboutController@index');
+
+Route::get('/categ', 'CategController@index');
