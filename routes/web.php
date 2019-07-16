@@ -33,3 +33,7 @@ Route::post('/form', 'ProviderInfo@store');
 //submit request form
 Route::post('/providers/{id}', 'DisplayProfileController@store_request');
 
+//let user see upcoming jobs and let them review. 
+Route::get('jobs', 'UserRequestController@index');
+Route::post('jobs', 'UserRequestController@review');
+

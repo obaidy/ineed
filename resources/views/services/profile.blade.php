@@ -31,4 +31,12 @@
 
 
     </form>
+    <div class="reviews">Reviews</div>
+    @foreach ($reviews as $review)
+        <div class="review">
+            <div class="user">{{$review->user_name}}</div>
+            <div class="rating">{{$review->rating}}</div>
+            <div class="text">{{$review->text}}</div>
+        </div>
+    @endforeach
 @endsection

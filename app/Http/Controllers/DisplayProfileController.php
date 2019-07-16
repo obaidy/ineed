@@ -11,8 +11,9 @@ class DisplayProfileController extends Controller
     {
         $provider = \App\User::where('id', $provider_id)->first();
         $availability = \App\Availability::where('user_id', $provider_id)->get();
+        $reviews = \App\Review::where('provider_id', $provider->id)->get();
 
-        return view('services/profile', compact('provider', "availability"));
+        return view('services/profile', compact('provider', "availability", 'reviews'));
     }
 
     public function store_request(Request $request, $provider_id)
@@ -36,7 +37,6 @@ class DisplayProfileController extends Controller
         $service_request->provider_email = $provider->email;
         $service_request->user_phone = $user->telephone_number;
         $service_request->provider_phone = $provider->telephone_number;
-
 
         $service_request->save();
 

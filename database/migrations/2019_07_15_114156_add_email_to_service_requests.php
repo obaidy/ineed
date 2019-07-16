@@ -16,9 +16,9 @@ class AddEmailToServiceRequests extends Migration
         Schema::table('service_requests', function (Blueprint $table) {
             $table->string('user_email');
             $table->string('provider_email');
-            $table->string('user_phone');
-            $table->string('provider_phone');
-
+            $table->string('user_phone')->nullable();
+            $table->string('provider_phone')->nullable();
+            $table->boolean('is_reviewed')->nullable();
         });
     }
 
