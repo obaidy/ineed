@@ -1,0 +1,172 @@
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url(/img/blue-background.jpg);
+    background-position: center;
+    background-position-y: -70px;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px;
+  }
+
+  /* Top */
+
+  
+
+  /* Logo */
+
+  .logo>a>img{
+      width: 190px;
+      float: left;
+      margin-left: 20px;
+      margin-top: 15px;
+    }
+
+  .login>a>img{
+    float: right;
+    width: 65px;
+    margin-top: -42px;
+    margin-right: 40px;
+  }
+  
+/* NavBar */
+  #menu-nav {
+    max-width: 900px;
+    margin: -5px auto;
+    background-color: #639cdd9f;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  #navigation-bar ul {
+    margin: 0px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  #navigation-bar li {
+    float: left;
+    width: 80%;
+  }
+  #navigation-bar li:hover a::before {
+    right: 0;
+    left: 0;
+  }
+  #navigation-bar a {
+    color: #700d26;
+    font-size: 22px;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  #navigation-bar a:hover {
+    color: #ffffff;
+  }
+  #navigation-bar a::before {
+    content: "";
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  #navigation-bar a:hover::before {
+    right: 0;
+    left: 0;
+  }
+  
+  li {
+      list-style: none;
+  }
+
+  /* Description */
+  .Description{
+      background-image: linear-gradient(to left, #639cddc5, #fa6c8fa1, #639cddc5);
+      /* background-color: #f37a98; */
+      width: 100%;
+      margin-top: 110px;
+      height: 70px;
+  }
+  .Description>h1{
+      color: white;
+      font-family: 'Dancing Script', cursive;
+      font-size: 35px;
+      text-align: center;
+      padding-top: 15px;
+      
+  }
+
+/* Review Title */
+
+.review-title{
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
+}
+
+.review-title>h3{
+  color: rgb(255, 255, 255);
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+  border-radius: 15px;
+  
+
+  
+}
+
+  /* Carousel */
+
+#reviews{
+  
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona{
+  
+  background-color: rgba(255, 255, 255, 0.856);
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  margin: 0px auto;
+  border: 1px white solid;
+  border-radius: 15px;
+  align-items: center;
+  
+ 
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona>.Guys{
+  margin-left: 25px;
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona>.Guys>img{
+    width: 150px;
+    border-radius: 50%;
+    align-self: right;
+    margin-top: 20px;
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona>.Guys>h1{
+  align-self: center;
+  font-size: 24px;
+}
+
+#reviews>.carousel-inner>.carousel-item>.persona>p{
+  text-align: left;
+  font-size: 22px;
+  margin-left: 60px;
+  margin-right: 15px;
+}

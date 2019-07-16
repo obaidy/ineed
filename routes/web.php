@@ -12,10 +12,12 @@
  */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/homepage/home'); //Changed for the new blade
 });
 
 Auth::routes();
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 //search by category
@@ -37,3 +39,6 @@ Route::post('/providers/{id}', 'DisplayProfileController@store_request');
 Route::get('jobs', 'UserRequestController@index');
 Route::post('jobs', 'UserRequestController@review');
 
+//about us route
+
+Route::get('/about', 'AboutController@index');

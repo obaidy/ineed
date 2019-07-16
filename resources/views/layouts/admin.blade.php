@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -634,12 +634,12 @@
               </select>
             
              
-             {{-- <select id = "myList">
+             <select id = "myList">
                <option value = "Baby-Sitter">Baby-Sitter</option>
                <option value = "House-Keeping">House-Keeping</option>
                <option value = "Gardner">Gardner</option>
                <option value = "Personal-Trainer">Personal-Trainer</option>
-             </select> --}}
+             </select> 
           </p>
        </fieldset>
 
@@ -650,28 +650,29 @@
               <div>Confirm your weekly availability</div>
               @foreach ($days_of_week as $day)
                   <span>{{$day}}</span>
-                  
+                  <select class="form-check form-check-inline">
                   @foreach ($times_of_day as $time)
                       {{-- availability iterator. --}}
                       {{-- Checks if day and time is in array provided --}}
                       @if (in_array($day."-".$time, $full_availability))
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" checked name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
+                          
+                            <option class="form-check-input" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
                             <label class= "form-check-label"for="{{$day}}-{{$time}}">{{ $time }}</label>
                         
-                          </div>
+                          
                       @else
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
+                      
+                          <option class="form-check-input" type="checkbox" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
                           <label class= "form-check-label"for="{{$day}}-{{$time}}">{{ $time }}</label>
                       
-                        </div>
+                        
                       @endif
+                      
                   
                     
                           
                   @endforeach
-                  
+                  </select>
                   <br>
               @endforeach
               <fieldset>
