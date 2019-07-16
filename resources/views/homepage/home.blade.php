@@ -66,7 +66,7 @@
                     <img src="img/Avatars/girl2.jfif" alt="">
                     <h1>Some Name</h1>
                 </div>
-                <p class="d-block w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam aliquam totam recusandae, praesentium laboriosamsit amet consectetur sit amet consectetur?</p>
+                <p class="d-block w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam aliquam totam recusandae, praesentium laboriosamsit amet consectetur sit amet?</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -98,6 +98,39 @@
         </div>
     </div>
 </div>
+
+<!-- Register -->
+<div class="registerTitle">
+    <h3>Create an account</h3>
+</div>
+
+<div class="register">
+    
+    <a href="#">
+        <div class="option">
+            <h4>Service Provider</h4>
+            <img src="img/options/service.png" alt="Service Provider Image">
+            <p>Do the job for someone.</p>
+        </div>
+    </a>
+
+    <a href="#">
+        <div class="option">
+            <h4>User</h4>
+            <img src="img/options/user.png" alt="User Image">
+            <p>Hire someone to do the job.</p>
+        
+        </div>
+    </a>
+</div>
+
+<!-- Footer -->
+
+<footer>
+    <div class="footer-copyright text-center py-3" >© 2019 Copyright:
+        <a href="/"> iNeed</a>
+  </div>
+</footer>
     
 
 <!-- Scripts -->
