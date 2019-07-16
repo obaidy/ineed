@@ -336,6 +336,7 @@
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
             <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
           </div>
+        </div>
 
           <!-- Content Row -->
           {{-- <div class="row"> --}}
@@ -616,7 +617,11 @@
       <!-- End of Main Content -->
 
 
+<<<<<<< Updated upstream
    
+=======
+    <div class='container-fluid'>
+>>>>>>> Stashed changes
       <form action="" method="post">
           <?= csrf_field() ?>
        <fieldset>
@@ -718,50 +723,81 @@
      </form>
      
         --}}
+    
       
       <input type="submit" value="submit">
     </form>
+  </div>
     
     <div class="jobs">
-      <div class="new-request">
-        <div>New Requests</div>
+        <div class="container">
+        <h4>New Requests</h4>
+        
+          <div class="row">
+            <div class="col-2 font-weight-bold">Name</div>
+            <div class="col-2 font-weight-bold">Date</div>
+            <div class="col font-weight-bold">Time</div>
+            <div class="col-2 font-weight-bold">Location</div>
+            <div class="col-5 font-weight-bold">Description</div>
+          </div>
+
         @foreach ($new_requests as $new_request)
-            <div class="requester">{{$new_request->user_name}}</div>
-              @php
-                  $unix_time = strtotime($new_request->service_date.' '.$new_request->service_time);
-                  $formatted_date = date('D, j M', $unix_time);
-                  $formatted_time = date("G:i", $unix_time);
-              @endphp
-            <div class="date">{{$formatted_date}}</div>
-            <div class="time">{{$formatted_time}}</div>
-            <div class="location">{{$new_request->service_location}} {{$new_request->house_number}}</div>
-            <div class="description">{{$new_request->description}}</div>
-            <form action="" method="post">
-              @csrf
-            <input type="hidden" name="service_id" value="{{$new_request->id}}">
-              <input type="submit" name='is_accepted' value="Accept">
-              <input type="submit" name='is_accepted' value="Deny">
+        <form action="" method="post">
+            @csrf
+          <div class='row'>
+              <div class="col-2 requester">{{$new_request->user_name}}</div>
+                @php
+                    $unix_time = strtotime($new_request->service_date.' '.$new_request->service_time);
+                    $formatted_date = date('D, j M', $unix_time);
+                    $formatted_time = date("G:i", $unix_time);
+                @endphp
+              <div class="col-2 date">{{$formatted_date}}</div>
+              <div class="col time">{{$formatted_time}}</div>
+              <div class="col-2 location">{{$new_request->service_location}} {{$new_request->house_number}}</div>
+              <div class="col-3 description">{{$new_request->description}}</div>
+             
+              <input type="hidden" name="service_id" value="{{$new_request->id}}">
+                <input class='col btn btn-success' type="submit" name='is_accepted' value="Accept">
+                <input class='col btn btn-danger' type="submit" name='is_accepted' value="Deny">
+            </div>
 
             </form>
         @endforeach
       </div>
-      <div id='myList' class="upcoming">
-        <div>Upcoming Jobs</div>
-        @foreach ($upcoming_requests as $upcoming_request)
-            <div class="requester">{{$upcoming_request->user_name}}</div>
-              @php
-                  $unix_time = strtotime($upcoming_request->service_date.' '.$upcoming_request->service_time);
-                  $formatted_date = date('D, j M', $unix_time);
-                  $formatted_time = date("G:i", $unix_time);
-              @endphp
-            <div class="date">{{$formatted_date}}</div>
-            <div class="time">{{$formatted_time}}</div>
-            <div class="location">{{$upcoming_request->service_location}} {{$upcoming_request->house_number}}</div>
-            <div class="description">{{$upcoming_request->description}}</div>
-            <div class="email">{{$upcoming_request->user_email}}</div>
-            <div class="telephone">{{$upcoming_request->user_phone}}</div>
-          
-        @endforeach
+      <div class="container upcoming">
+        <h4>Upcoming Jobs</h4>
+        <div class="row">
+            <div class="col font-weight-bold">Name</div>
+            <div class="col font-weight-bold">Date</div>
+            <div class="col font-weight-bold">Time</div>
+            <div class="col-2 font-weight-bold">Location</div>
+            <div class="col-3 font-weight-bold">Description</div>
+            <div class="col-2 font-weight-bold">Email</div>
+            <div class="col-2 font-weight-bold">Telephone</div>
+          </div>
+          @foreach ($upcoming_requests as $upcoming_request)
+          <div class='row'>
+              <div class="col requester">{{$upcoming_request->user_name}}</div>
+                @php
+                    $unix_time = strtotime($upcoming_request->service_date.' '.$upcoming_request->service_time);
+                    $formatted_date = date('D, j M', $unix_time);
+                    $formatted_time = date("G:i", $unix_time);
+                @endphp
+              <div class="col date">{{$formatted_date}}</div>
+              <div class="col time">{{$formatted_time}}</div>
+              <div class="col-2 location">{{$upcoming_request->service_location}} {{$upcoming_request->house_number}}</div>
+              <div class="col-3 description">{{$upcoming_request->description}}</div>
+              <div class="col-2 email">{{$upcoming_request->user_email}}</div>
+              
+              @if ($unix_time < time())
+                <div class="col telephone">{{$upcoming_request->user_phone}}</div>
+                <input class='col btn btn-primary'type='submit' value="completed">
+              @else
+                <div class="col-2 telephone">{{$upcoming_request->user_phone}}</div>
+              @endif
+          </div>
+          @endforeach
+        
 
       </div>
       
