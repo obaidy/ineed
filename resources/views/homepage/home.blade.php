@@ -25,8 +25,8 @@
         <div id="menu-nav">
             <div id="navigation-bar">
                 <ul>
-                    <li><a href="/home"><i class="fa fa-home"></i><span>Home</span></a></li>
-                    <li><a href="#"><i class="fa fa-handshake"></i><span>Categories</span></a></li>
+                    <li><a href="/"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li><a href="/categ"><i class="fa fa-handshake"></i><span>Categories</span></a></li>
                     <li><a href="/about"><i class="fa fa-user"></i><span>About</span></a></li>
                     <li><a href="#"><i class="fa fa-book"></i><span>Contact</span></a></li>
                 </ul>
@@ -34,7 +34,7 @@
         </div>
         <!-- Log in -->
         <div class="login">
-            <a href="#"><img src="./img/login.png" alt=""></a>
+            <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
         </div>
     </div>
     <!-- End Top -->
@@ -66,7 +66,7 @@
                     <img src="img/Avatars/girl2.jfif" alt="">
                     <h1>Some Name</h1>
                 </div>
-                <p class="d-block w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam aliquam totam recusandae, praesentium laboriosamsit amet consectetur sit amet consectetur?</p>
+                <p class="d-block w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam aliquam totam recusandae, praesentium laboriosamsit amet consectetur sit amet?</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -98,6 +98,41 @@
         </div>
     </div>
 </div>
+
+<!-- Register -->
+<div class="registerTitle">
+    <h3>Create an account</h3>
+</div>
+
+<div class="register">
+    @if (Route::has('register'))
+        <a href="{{ route('register', ['role' => 'provider']) }}">
+            <div class="option">
+                <h4>Service Provider</h4>
+                <img src="img/options/service.png" alt="Service Provider Image">
+                <p>Do the job for someone.</p>
+            </div>
+        </a>
+    @endif
+    @if (Route::has('register'))
+        <a href="{{ route('register', ['role' => 'user']) }}">
+            <div class="option">
+                <h4>User</h4>
+                <img src="img/options/user.png" alt="User Image">
+                <p>Hire someone to do the job.</p>
+            
+            </div>
+        </a>
+    @endif
+</div>
+
+<!-- Footer -->
+
+<footer>
+    <div class="footer-copyright text-center py-3" >© 2019 Copyright:
+        <a href="/"> iNeed</a>
+  </div>
+</footer>
     
 
 <!-- Scripts -->

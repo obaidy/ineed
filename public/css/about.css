@@ -4,10 +4,21 @@ body {
     background-position-y: -70px;
     font-family: 'Quicksand', sans-serif;
     color: white;
+    margin: 0px;
+    padding: 0px;
     
 }
 
-
+html{
+  margin: 0px;
+  padding: 0px;
+}
+.logo>a>img{
+  width: 190px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 15px;
+}
 
 .login>a>img{
   float: right;
@@ -16,15 +27,34 @@ body {
   margin-right: 40px;
 }
 
+<<<<<<< HEAD
+.abouttxt{
+  background-color: rgba(255, 255, 255, 0.705);
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 40px;
+}
+
+.abouttxt>h1 {
+   color: #d54d7b; 
+   font-family: "Great Vibes", cursive; 
+   font-size: 60px; 
+   font-weight: normal; 
+   margin-bottom: 0px; 
+   padding-top: 40px; 
+   text-align: center; 
+   text-shadow: 0 1px 1px #fff;
+=======
 .container {
     margin-left: 5rem;
     padding-left:5px;
-
+    background-color:rgba(0, 0, 0, 0.377);
 }
 
 .abouttxt {
-    background-color:black;
-    opacity: 0.5;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -34,7 +64,22 @@ body {
     padding-left:3rem;
     padding-right:3rem;
 
+>>>>>>> af40d552381d6c0d4e284011c09ac3125f71a77a
 }
+.abouttxt>p { 
+  color: #383838; 
+  font-size: 26px; 
+  font-family: "Libre Baskerville", serif; 
+  line-height: 40px; 
+  text-align: center; 
+  text-shadow: 0 1px 1px #fff; 
+  padding-top: 20px; 
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+  
+  
 
 
 /* NavBar */
@@ -91,4 +136,10 @@ body {
 
 li {
     list-style: none;
+}
+
+footer{
+  background-color: rgba(78, 78, 78, 0.925);
+  color: white;
+  
 }
