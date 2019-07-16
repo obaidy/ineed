@@ -28,12 +28,16 @@ Route::get('/providers/{id?}', 'DisplayProfileController@index');
 Route::get('/provider', 'ProviderController@index');
 Route::post('/provider', 'ProviderController@store');
 
-//edit Provider Information
+//edit Provider Information or accept/deny request
 Route::get('/form', 'ProviderInfo@index');
 Route::post('/form', 'ProviderInfo@store');
 
 //submit request form
 Route::post('/providers/{id}', 'DisplayProfileController@store_request');
+
+//let user see upcoming jobs and let them review. 
+Route::get('jobs', 'UserRequestController@index');
+Route::post('jobs', 'UserRequestController@review');
 
 //about us route
 

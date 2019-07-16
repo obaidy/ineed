@@ -10,7 +10,7 @@ class ProviderInfo extends Controller
     public function index()
     {
         $days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", 'Friday', "Saturday", "Sunday"];
-        $times_of_day = ["Early Morning", "Late Morning", 'Early Afternoon', "Late Afternoon", "Early Evening", "Late Evening"];
+        $times_of_day = ["Morning", 'Afternoon', "Evening", "All Day"];
 
         $user = \Auth::user();
         //plucks only days (and hours) available from availability of user, and puts in array
@@ -34,7 +34,7 @@ class ProviderInfo extends Controller
     {
         //save availability
         $days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", 'Friday', "Saturday", "Sunday"];
-        $times_of_day = ["Early Morning", "Late Morning", 'Early Afternoon', "Late Afternoon", "Early Evening", "Late Evening"];
+        $times_of_day = ["Morning", 'Afternoon', "Evening", "All Day"];
 
         $user = \Auth::user();
         $id = \Auth::user()->id;
