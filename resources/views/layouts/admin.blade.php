@@ -329,7 +329,7 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        {{-- <div class="container-fluid"> --}}
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -338,7 +338,7 @@
           </div>
 
           <!-- Content Row -->
-          <div class="row">
+          {{-- <div class="row"> --}}
 
             <!-- Earnings (Monthly) Card Example -->
             <!-- <div class="col-xl-3 col-md-6 mb-4">
@@ -453,7 +453,7 @@
             <!-- Pie Chart -->
             <!-- <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
+                <!- Card Header - Dropdown -->
                 <!-- <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
                   <div class="dropdown no-arrow">
@@ -616,12 +616,12 @@
       <!-- End of Main Content -->
 
 
-    <div>
+   
       <form action="" method="post">
           <?= csrf_field() ?>
        <fieldset>
           <legend>Categories</legend>
-          <p>
+          
               <select id = 'myList' name="category">
       
                   @foreach ($categories as $category)
@@ -635,41 +635,41 @@
             
              
             
-          </p>
+        
        </fieldset>
-
-    
-       <fieldset>
           <legend>Availability</legend>
           
-              <div>Confirm your weekly availability</div>
+              <div class="container">Confirm your weekly availability
               @foreach ($days_of_week as $day)
-                  <span>{{$day}}</span>
-                  <select class="form-check form-check-inline">
+                  <div class="row">
+                  <div class="col">{{$day}}</div>
                   @foreach ($times_of_day as $time)
+                  
                       {{-- availability iterator. --}}
                       {{-- Checks if day and time is in array provided --}}
                       @if (in_array($day."-".$time, $full_availability))
-                          
-                            <option class="form-check-input" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
+                      
+                          <div class='col'>
+                            <input type="checkbox" checked class="form-check-input" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
                             <label class= "form-check-label"for="{{$day}}-{{$time}}">{{ $time }}</label>
-                        
+                          </div>
                           
                       @else
-                      
-                          <option class="form-check-input" type="checkbox" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
+                      <div class='col'>
+                          <input type="checkbox" class="form-check-input" name="avail[]" id="{{$day}}-{{$time}}" value="{{$day}}-{{$time}}">
                           <label class= "form-check-label"for="{{$day}}-{{$time}}">{{ $time }}</label>
-                      
+                      </div>
                         
                       @endif
                       
                   
                     
-                          
+                    
                   @endforeach
-                  </select>
+                </div>
                   <br>
               @endforeach
+              </div>
               <fieldset>
                 <legend>Availability</legend>
                 <p> 
@@ -700,7 +700,7 @@
               </select>
            </p>
         </fieldset>
-       </form>
+       
       <fieldset>
 
           {{-- <input type="text" name="name" value='{{$user->name}}'> --}}
@@ -716,7 +716,7 @@
        <br>
        <input type="submit">
      </form>
-     </div>
+     
         --}}
       
       <input type="submit" value="submit">
