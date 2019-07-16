@@ -38,3 +38,5 @@ Route::post('/providers/{id}', 'DisplayProfileController@store_request');
 //about us route
 
 Route::get('/about', 'AboutController@index');
+
+Route::get('/categ', 'CategController@index');
