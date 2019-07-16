@@ -34,7 +34,7 @@
         </div>
         <!-- Log in -->
         <div class="login">
-            <a href="#"><img src="./img/login.png" alt=""></a>
+            <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
         </div>
     </div>
     <!-- End Top -->
@@ -105,23 +105,25 @@
 </div>
 
 <div class="register">
-    
-    <a href="#">
-        <div class="option">
-            <h4>Service Provider</h4>
-            <img src="img/options/service.png" alt="Service Provider Image">
-            <p>Do the job for someone.</p>
-        </div>
-    </a>
-
-    <a href="#">
-        <div class="option">
-            <h4>User</h4>
-            <img src="img/options/user.png" alt="User Image">
-            <p>Hire someone to do the job.</p>
-        
-        </div>
-    </a>
+    @if (Route::has('register'))
+        <a href="{{ route('register', ['role' => 'provider']) }}">
+            <div class="option">
+                <h4>Service Provider</h4>
+                <img src="img/options/service.png" alt="Service Provider Image">
+                <p>Do the job for someone.</p>
+            </div>
+        </a>
+    @endif
+    @if (Route::has('register'))
+        <a href="{{ route('register', ['role' => 'user']) }}">
+            <div class="option">
+                <h4>User</h4>
+                <img src="img/options/user.png" alt="User Image">
+                <p>Hire someone to do the job.</p>
+            
+            </div>
+        </a>
+    @endif
 </div>
 
 <!-- Footer -->

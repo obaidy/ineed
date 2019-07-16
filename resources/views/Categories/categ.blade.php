@@ -43,7 +43,7 @@
 
         
         <div class="categ">
-            <a href="#">
+            <a href="<?= action('SearchController@index', 'babysitter') ?>">
                 <h2>Babysitter</h2>
                 <img src="img/categ/baby.png" alt="">
             </a>        
@@ -51,21 +51,21 @@
         
 
         <div class="categ">
-            <a href="#">
+            <a href="<?= action('SearchController@index', 'gardener') ?>">
                 <h2>Gardener</h2>
                 <img src="img/categ/garden.png" alt="">
             </a>
         </div>
     
         <div class="categ">
-            <a href="#">
+            <a href="<?= action('SearchController@index', 'personal-trainer') ?>">
                 <h2>Personal Trainer</h2>
                 <img src="img/categ/coach.png" alt="">
             </a>
         </div>
 
         <div class="categ">
-            <a href="#">
+            <a href="<?= action('SearchController@index', 'housekeeper') ?>">
                 <h2>House keeping</h2>
                 <img src="img/categ/mop.png" alt="">
             </a>
