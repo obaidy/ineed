@@ -617,11 +617,8 @@
       <!-- End of Main Content -->
 
 
-<<<<<<< Updated upstream
    
-=======
     <div class='container-fluid'>
->>>>>>> Stashed changes
       <form action="" method="post">
           <?= csrf_field() ?>
        <fieldset>

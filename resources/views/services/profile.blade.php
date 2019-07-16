@@ -5,16 +5,43 @@
     <div>{{ $provider->wage }}</div>
     <div>{{ $provider->description }}</div>
 
-    @foreach($availability as $time)
+    <div class="container my-5 w-50">
+        <h3>This provider's weekly availability</h3>
+        <div class="row">
+            <div class="col"></div>
+            <div class='col text-center'>Morning</div>
+            <div class="col text-center">Afternoon</div>
+            <div class="col text-center">Evening</div>
+            <div class="col text-center">All Day</div>
+        </div>
+            @foreach ($days_of_week as $day)
+                <div class="row">
+                <div class="col">{{$day}}</div>
+                @foreach ($times_of_day as $time)
+                
+                    {{-- availability iterator. --}}
+                    {{-- Checks if day and time is in array provided --}}
+                    @if (in_array($day."-".$time, $full_availability))
+                    
+                        <div class='col rounded p-3 ml-1 mb-1 bg-success text-white'>
+                        </div>
+                        
+                    @else
+                    <div class='col rounded p-3 ml-1 mb-1 bg-danger text-white"'>
+                         </div>
+                      
+                    @endif
+                    @endforeach
+                </div>
+                  
+              @endforeach
+              </div>
         
-        <div>{{$time->day}}</div>
-        <div>{{$time->hour}}</div>
-
-    @endforeach
+       
 
     {{-- request --}}
     
-    <form class='container mb-3' action="" method='post'>
+    <form class='container my-5' action="" method='post'>
         @csrf
         <h3 class='mb-3'>Request this provider at one of his available times.</h3 class='mb-3'>
         
@@ -36,7 +63,7 @@
               </div>
         </div>
 
-        <div class="form-row form-group">
+        <div class="form-row">
     
               <div class="col input-group mb-3">
                 <div class="input-group-prepend">

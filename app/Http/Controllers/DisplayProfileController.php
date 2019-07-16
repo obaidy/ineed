@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Service_Request;
+use App\Availability;
 use Illuminate\Http\Request;
 
 class DisplayProfileController extends Controller
@@ -10,10 +11,20 @@ class DisplayProfileController extends Controller
     public function index($provider_id)
     {
         $provider = \App\User::where('id', $provider_id)->first();
-        $availability = \App\Availability::where('user_id', $provider_id)->get();
+        //$availability = \App\Availability::where('user_id', $provider_id)->get();
         $reviews = \App\Review::where('provider_id', $provider->id)->get();
+        $days_available = Availability::where('user_id', '=', $provider->id)->pluck('day');
+        $hours_available = Availability::where('user_id', '=', $provider->id)->pluck('hour');
+        $days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", 'Friday', "Saturday", "Sunday"];
+        $times_of_day = ["Morning", 'Afternoon', "Evening", "All Day"];
 
-        return view('services/profile', compact('provider', "availability", 'reviews'));
+        //put into format of checkbox value
+        $full_availability = [];
+        foreach ($days_available as $key => $day_available) {
+            $full_availability[] = $day_available . '-' . $hours_available[$key];
+        }
+
+        return view('services/profile', compact('provider', 'days_of_week', 'times_of_day', "full_availability", 'reviews'));
     }
 
     public function store_request(Request $request, $provider_id)
