@@ -4,13 +4,11 @@ html {
 }
 
 body {
-    background-image: url(/img/loghome.jpg);
-    background-position: center;
-    background-position-y: -200px;
-    background-size: auto;
-    background-repeat: no-repeat;
-    font-family: 'Quicksand', sans-serif;
-    margin: 0px;
+  background-image: url(/img/blue-background.jpg);
+  background-position: center;
+  background-position-y: -70px;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
   }
 
 /* TOP */

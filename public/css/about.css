@@ -1,12 +1,9 @@
 body {
-    background-image: url(/img/interior.jpg);
-    background-position: center;
-    background-position-y: -70px;
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-    margin: 0px;
-    padding: 0px;
-    
+  background-image: url(/img/blue-background.jpg);
+  background-position: center;
+  background-position-y: -600px;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
 }
 
 html{
