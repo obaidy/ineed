@@ -52,7 +52,7 @@
     <!-- Carousel review -->
 
 <div class="review-title">
-    <h4>Our users reviews</h4>
+    <h3>Our users reviews</h3>
 </div>
 
 <div id="reviews" class="carousel slide" data-ride="carousel">
