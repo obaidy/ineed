@@ -23,11 +23,24 @@
                 </ul>
             </div>
         </div>
-        <div class="login">
-            <a href="#"><img src="./img/login.png" alt=""></a>
+         <!-- Log in -->
+         <div class="login">
+            <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
         </div>
         <div class="contact-title">
             <h1>Stay in Touch</h1>
+
+        <div class="contact-form">
+            <form id="contact-form" method="post" action="">
+                <input name="name" type="text" class="form-control" placeholder="Your name" required><br>
+                <input name="email" type="email" class="form-control" placeholder="Your E-mail" required><br>
+
+                <textarea class="form-control" name="message" placeholder="Message" rows="4" required></textarea><br>
+
+                <input class="form-control submit" type="submit" value="SEND MESSAGE">
+
+            </form>
+        </div>
             
 
         </div>

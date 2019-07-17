@@ -2,18 +2,37 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 150, 0.5),rgba(0, 0, 50, 0.5)), url(/img/blue-background.jpg);
+    background: linear-gradient(rgba(0, 0, 150, 0.5), rgba(0, 0, 50, 0.5)), url(/img/blue-background.jpg);
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
 }
-.login>a>img{
+
+.contact-title {
+    margin-top: 100px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 4s ease-in-out;
+}
+.contact-title {
+    font-size: 32px;
+    line-height: 10px;
+}
+
+.logo>a>img{
+    width: 190px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  .login>a>img{
     float: right;
     width: 65px;
     margin-top: -42px;
     margin-right: 40px;
   }
-
+  
+/* NavBar */
   #menu-nav {
     max-width: 900px;
     margin: -5px auto;
@@ -21,7 +40,7 @@ body {
     border-radius: 4px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   }
-
+  
   #navigation-bar ul {
     margin: 0px;
     border-radius: 4px;
@@ -64,13 +83,41 @@ body {
     right: 0;
     left: 0;
   }
+  
   li {
-    list-style: none;
-}
+      list-style: none;
+  }
 
-.contact-title {
-    margin-top: 100px;
-    color: #fff;
-    text-transform: uppercase;
-    transition: all
-}
+  form {
+      margin-top: 50px;
+      transition: all 4s ease-in-out;
+  }
+
+  .form-control {
+      width: 600px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid gray;
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 16px;
+  }
+
+  input {
+      height: 45px;
+  }
+
+  form .submit {
+      background: #ff5722;
+      border-color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 50px;
+      margin-top: 20px;
+  }
+  form .submit:hover {
+      background-color: #f44336;
+      cursor: pointer;
+  }

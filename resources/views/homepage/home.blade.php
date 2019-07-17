@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS and Fonts -->
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"> 
 
@@ -46,7 +46,7 @@
     <!-- Carousel review -->
 
 <div class="review-title">
-    <h3>Our users reviews</h3>
+    <h4>Our users reviews</h4>
 </div>
 
 <div id="reviews" class="carousel slide" data-ride="carousel">
