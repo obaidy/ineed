@@ -19,6 +19,8 @@ class CreateReviewsTable extends Migration
             $table->text('text')->nullable();
             $table->integer('user_id');
             $table->integer('provider_id');
+            $table->string('user_name');
+            $table->string('provider_name');
             $table->timestamps();
         });
     }

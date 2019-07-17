@@ -6,8 +6,8 @@ class CategController extends Controller
 {
     public function index()
     {
-        $serviceList = \App\Category::all();
+        
 
-        return view('Categories/categ', compact('services'));
+        return view('Categories/categ');
     }
 }

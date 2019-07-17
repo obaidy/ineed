@@ -15,6 +15,7 @@ class CreateAvailabilityTable extends Migration
     {
         Schema::create('availability', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
             $table->string('day')->nullable();
             $table->string('hour')->nullable();
             $table->boolean('is_available');

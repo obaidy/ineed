@@ -33,9 +33,15 @@
             </div>
         </div>
         <!-- Log in -->
-        <div class="login">
-            <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
-        </div>
+        @guest
+            <div class="login">
+                <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
+            </div>
+        @else
+            <div class="login">
+                    <a href="#"><img src="./img/login.png" alt=""></a>
+            </div>
+        @endguest
     </div>
     <!-- End Top -->
     <!-- Description -->
@@ -100,6 +106,7 @@
 </div>
 
 <!-- Register -->
+@guest
 <div class="registerTitle">
     <h3>Create an account</h3>
 </div>
@@ -125,6 +132,7 @@
         </a>
     @endif
 </div>
+@endguest
 
 <!-- Footer -->
 

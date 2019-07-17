@@ -15,6 +15,10 @@
 </head>
 <body>
     <div class="Top">
+    <div class="logo">
+                
+                <a href="/"><img src="./img/logo.png" alt=""></a>
+        </div>
     
         <!-- Navbar -->
         <div id="menu-nav">
@@ -27,6 +31,7 @@
                 </ul>
             </div>
         </div>
+
          <!-- Log in -->
          <div class="login">
             <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
