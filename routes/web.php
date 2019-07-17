@@ -43,4 +43,9 @@ Route::post('jobs', 'UserRequestController@review');
 
 Route::get('/about', 'AboutController@index');
 
+//categories 
 Route::get('/categ', 'CategController@index');
+
+//contact
+Route::get('/contact', 'ContactController@index');
+
