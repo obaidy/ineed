@@ -1,12 +1,9 @@
 body {
-    background-image: url(/img/interior.jpg);
-    background-position: center;
-    background-position-y: -70px;
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-    margin: 0px;
-    padding: 0px;
-    
+  background-image: url(/img/blue-background.jpg);
+  background-position: center;
+  background-position-y: -600px;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
 }
 
 html{
@@ -63,59 +60,74 @@ html{
 
 
 /* NavBar */
+.logo>a>img{
+  width: 190px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.login>a>img{
+float: right;
+width: 65px;
+margin-top: -42px;
+margin-right: 40px;
+}
+
+/* NavBar */
 #menu-nav {
-  max-width: 900px;
-  margin: -5px auto;
-  background-color: #639cdd9f;
-  border-radius: 4px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+max-width: 900px;
+margin: -5px auto;
+background-color: #639cdd9f;
+border-radius: 4px;
+box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #navigation-bar ul {
-  margin: 0px;
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
+margin: 0px;
+border-radius: 4px;
+overflow: hidden;
+display: flex;
+justify-content: center;
 }
 #navigation-bar li {
-  float: left;
-  width: 80%;
+float: left;
+width: 80%;
 }
 #navigation-bar li:hover a::before {
-  right: 0;
-  left: 0;
+right: 0;
+left: 0;
 }
 #navigation-bar a {
-  color: #700d26;
-  font-size: 22px;
-  text-decoration: none;
-  text-align: center;
-  padding: 20px 0;
-  display: block;
-  position: relative;
-  transition: all 0.3s ease;
+color: #700d26;
+font-size: 22px;
+text-decoration: none;
+text-align: center;
+padding: 20px 0;
+display: block;
+position: relative;
+transition: all 0.3s ease;
 }
 #navigation-bar a:hover {
-  color: #ffffff;
+color: #ffffff;
 }
 #navigation-bar a::before {
-  content: "";
-  transition: all 0.4s ease-in-out;
-  position: absolute;
-  right: 50%;
-  left: 50%;
-  bottom: 0;
-  height: 2px;
-  background-color: #ffffff;
+content: "";
+transition: all 0.4s ease-in-out;
+position: absolute;
+right: 50%;
+left: 50%;
+bottom: 0;
+height: 2px;
+background-color: #ffffff;
 }
 #navigation-bar a:hover::before {
-  right: 0;
-  left: 0;
+right: 0;
+left: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 footer{
