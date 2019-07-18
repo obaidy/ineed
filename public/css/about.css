@@ -10,6 +10,20 @@ html{
   margin: 0px;
   padding: 0px;
 }
+.button{
+  float: right;
+  position: relative;
+  right: 0px;
+  margin-top: 40px;
+  margin-right: -70px;
+}
+
+button{
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+  background-color: #639cddc5;
+  border: 1px solid white;
+}
 .logo>a>img{
   width: 190px;
   float: left;

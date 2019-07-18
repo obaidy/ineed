@@ -38,10 +38,12 @@
             <div class="dropdown login">
                 <a href="/provider"><img src="./img/login.png" alt=""></a>
             </div>
+            <div class="button">
             <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                 @csrf
                 <button>Logout</button>
             </form>
+            </div>
         @endguest
         <div class="container">
             <div class="abouttxt">
