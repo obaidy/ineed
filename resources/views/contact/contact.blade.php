@@ -33,9 +33,19 @@
         </div>
 
          <!-- Log in -->
-         <div class="login">
-            <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
-        </div>
+         @guest
+            <div class="login">
+                <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
+            </div>
+        @else
+            <div class="dropdown login">
+                <a href="/provider"><img src="./img/login.png" alt=""></a>
+            </div>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+                @csrf
+                <button>Logout</button>
+            </form>
+        @endguest
         <div class="contact-title">
             <h1>Stay in Touch</h1>
 
