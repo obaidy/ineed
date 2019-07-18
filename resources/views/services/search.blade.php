@@ -24,7 +24,6 @@
             margin-right: auto;
             width: 60%;
             font-size: 20px;
-            height: 100px;
             border-radius: 10px;
             text-decoration: none;
         }
