@@ -66,18 +66,18 @@
             <div class="persona">
                 <div class="Guys">
                     <img src="img/Avatars/Girl1.jfif" alt="">
-                    <h1>Some Name</h1>
+                    <h1>Erika</h1>
                 </div>
-                <p class="d-block w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti inventore atque alias corporis delectus nesciunt sit amet consectetur sit amet consectetur?</p>
+                <p class="d-block w-100">On INeed I found a great personal trainer who comes to my house on my schedule and makes my life that much simpler.</p>
             </div>
         </div>
         <div class="carousel-item">
             <div class="persona">
                 <div class="Guys">
                     <img src="img/Avatars/girl2.jfif" alt="">
-                    <h1>Some Name</h1>
+                    <h1>Zuzana</h1>
                 </div>
-                <p class="d-block w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore veniam aliquam totam recusandae, praesentium laboriosamsit amet consectetur sit amet?</p>
+                <p class="d-block w-100"></p>
             </div>
         </div>
         <div class="carousel-item">
