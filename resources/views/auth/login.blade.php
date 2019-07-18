@@ -4,8 +4,8 @@
 <head>
     <style>
         .container{
-            margin-top: 50px;
-            margin-bottom: 270px;
+            margin-top: 145px;
+            margin-bottom: 180px;
             
         }
        
