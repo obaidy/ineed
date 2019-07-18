@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Service_Request;
 use App\Availability;
+use App\Category;
+use App\Service_Request;
 use Illuminate\Http\Request;
 
 class DisplayProfileController extends Controller
@@ -13,6 +14,8 @@ class DisplayProfileController extends Controller
         $provider = \App\User::where('id', $provider_id)->first();
         //$availability = \App\Availability::where('user_id', $provider_id)->get();
         $reviews = \App\Review::where('provider_id', $provider->id)->get();
+        $categ_id = $provider->category_id;
+        $categ = \App\Category::where('id', $provider->category_id)->first();
         $days_available = Availability::where('user_id', '=', $provider->id)->pluck('day');
         $hours_available = Availability::where('user_id', '=', $provider->id)->pluck('hour');
         $days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", 'Friday', "Saturday", "Sunday"];
@@ -24,7 +27,7 @@ class DisplayProfileController extends Controller
             $full_availability[] = $day_available . '-' . $hours_available[$key];
         }
 
-        return view('services/profile', compact('provider', 'days_of_week', 'times_of_day', "full_availability", 'reviews'));
+        return view('services/profile', compact('provider', 'categ', 'days_of_week', 'times_of_day', "full_availability", 'reviews'));
     }
 
     public function store_request(Request $request, $provider_id)

@@ -1,12 +1,16 @@
 @extends('layouts.ineed')
 
 @section('content')
-    <div>{{ $provider->name }}</div>
-    <div>{{ $provider->wage }}</div>
-    <div>{{ $provider->description }}</div>
+    <div class='mt-5 w-50 container bg-dark text-white rounded'>
+    <div class='px-3 py-2'>Hi, I'm <span class='font-weight-bold'>{{ $provider->name }}</span> and I'm a <span class='font-weight-bold'>{{$categ->name}}</span>.</div>
+    <div class='pl-3 font-weight-bold'>a little about me:</div>
+    <div class='px-3 py-1'>{{ $provider->description }}</div>
+      <div class='p-3'>I'm asking for {{ $provider->wage }} CZK per hour</div>
+      
+    </div>
 
     <div class="container my-5 w-50">
-        <h3 class='text-white bg-dark text-center'>This provider's weekly availability</h3>
+        <h3 class='text-white bg-dark text-center rounded'>This provider's weekly availability</h3>
         <div class="row">
             <div class="col"></div>
             <div class='text-white bg-dark ml-1 mb-1 rounded font-weight-bold col text-center'>Morning</div>
