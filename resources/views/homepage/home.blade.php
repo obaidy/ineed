@@ -106,7 +106,7 @@
 </div>
 
 <!-- Register -->
-@guest
+
 <div class="registerTitle">
     <h3>Create an account</h3>
 </div>
@@ -132,7 +132,7 @@
         </a>
     @endif
 </div>
-@endguest
+
 
 <!-- Footer -->
 
