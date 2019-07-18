@@ -108,5 +108,16 @@ class ProviderController extends Controller
             return redirect(action('ProviderController@index'));
         }
 
+        if ($request->has('is_done')) {
+            $service_id = \App\Service_Request::where('id', $request->service_id)->first();
+            
+                $service_id->is_done = true;
+
+            $service_id->save();
+            
+            return redirect(action('ProviderController@index'));
+        }
+
+
     }
 }

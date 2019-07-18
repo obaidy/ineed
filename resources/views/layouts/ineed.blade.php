@@ -41,6 +41,9 @@
             <div class="login">
                     <a href="#"><img src="./img/login.png" alt=""></a>
             </div>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         @endguest
     </div>
     <!-- End Top -->

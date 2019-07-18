@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Ahmed - Dashboard</title>
+  <title>INeed Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="/css/fontawesome.css" rel="stylesheet" type="text/css">
@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="/css/admin.css" rel="stylesheet">
+  
 
 </head>
 
@@ -29,7 +30,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -41,10 +42,20 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href=#>
+        <a class="nav-link" href='/'>
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Home</span></a>
       </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="{{ action('DisplayProfileController@index', $user->id)}}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>My Profile</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/categ">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span>Categories</span></a>
+          </li>
 
       <!-- Divider -->
       <!-- <hr class="sidebar-divider"> -->
@@ -174,7 +185,7 @@
                 <i class="fas fa-search fa-fw"></i>
               </a>
               <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+              {{-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                 <form class="form-inline mr-auto w-100 navbar-search">
                   <div class="input-group">
                     <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
@@ -185,7 +196,7 @@
                     </div>
                   </div>
                 </form>
-              </div>
+              </div> --}}
             </li>
 
             <!-- Nav Item - Alerts -->
@@ -238,12 +249,12 @@
             </li>
 
             <!-- Nav Item - Messages -->
-            <li class="nav-item dropdown no-arrow mx-1">
+            {{-- <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-envelope fa-fw"></i>
+                <i class="fas fa-envelope fa-fw"></i> --}}
                 <!-- Counter - Messages -->
-                <span class="badge badge-danger badge-counter">7</span>
-              </a>
+                {{-- <span class="badge badge-danger badge-counter">7</span>
+              </a> --}}
               <!-- Dropdown - Messages -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header">
@@ -297,9 +308,9 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href=# id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ $user->name }}</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <img class="img-profile rounded-circle" src="./img/login.png">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -773,6 +784,10 @@
             <div class="col-2 font-weight-bold">Telephone</div>
           </div>
           @foreach ($upcoming_requests as $upcoming_request)
+          @if (!$upcoming_request->is_done)
+              
+          <form action="" method='post'>
+            @csrf
           <div class='row'>
               <div class="col requester">{{$upcoming_request->user_name}}</div>
                 @php
@@ -788,11 +803,14 @@
               
               @if ($unix_time < time())
                 <div class="col telephone">{{$upcoming_request->user_phone}}</div>
-                <input class='col btn btn-primary'type='submit' value="completed">
+                <input type="hidden" name="service_id" value="{{$upcoming_request->id}}">
+                <input class='col btn btn-primary'type='submit' name='is_done' value="completed">
               @else
                 <div class="col-2 telephone">{{$upcoming_request->user_phone}}</div>
               @endif
           </div>
+        </form>
+        @endif
           @endforeach
         
 
