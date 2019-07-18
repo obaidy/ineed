@@ -41,7 +41,7 @@
                 <a href="{{ action('DisplayProfileController@index', $provider->id) }}">
                 <div>{{ $provider->name}}</div>
                 <div>{{ $provider->description}}</div>
-                <div>{{ $provider->wage}}</div>
+                <div>{{ $provider->wage}} CZK per hour</div>
                 <div>{{ $provider->profile_image}}</div>
                 </a>
             </div>

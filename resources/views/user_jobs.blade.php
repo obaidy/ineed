@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="upcoming container mt-5">
-    <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center mt-5'>The following jobs have been accepted and are upcoming</h2>
+    <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center mt-5'>These requests you made have been accepted and are coming up soon</h2>
     @foreach ($service_requests as $requests)
         <div class="row font-weight-bold job">
             <div class="col provider">{{$requests->provider_name}}</div>
@@ -20,9 +20,11 @@
         </div>
     @endforeach
 </div>
+@if (empty($service_denied))
 
+    
 <div class="denied container mt-5">
-        <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center'>The following jobs have been denied</h2>
+        <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center'>Unfortunately, these requests of yours have been denied</h2>
         @foreach ($service_denied as $denied)
             <div class="row font-weight-bold job">
                 <div class="col provider">{{$denied->provider_name}}</div>
@@ -38,10 +40,11 @@
             </div>
         @endforeach
     </div>
+@endif
 
 
 <div class="finished container mt-5">
-    <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center'>The following jobs are completed.</h2>
+    <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center'>These requests have been finished.</h2>
     @foreach ($service_finished as $finished)
         <div class="job row bg-white rounded m-3 font-weight-bold">
             <div class="col provider">{{$finished->provider_name}}</div>
@@ -53,12 +56,11 @@
             <div class="col date">{{$formatted_date}}</div>
             <div class="col time">{{$formatted_time}}</div>
             <div class="col location">{{$finished->service_location}} {{$finished->house_number}}</div>
-            <div class="col description">{{$finished->description}}</div>
             <div class="col email">{{$finished->provider_email}}</div>
             <div class="col telephone">{{$finished->provider_phone}}</div>
             @if (!$finished->is_reviewed)
                 <div class='review'>
-                    <h3>You can now review this provider.</h3>
+                    <h3>You can now review {{ $finished->provider_name}}.</h3>
                     <form action="" method='post'>
                         @csrf
                         <input type="hidden" name="provider_id" value="{{$finished->provider_id}}">
