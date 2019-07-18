@@ -77,34 +77,34 @@
                     <img src="img/Avatars/girl2.jfif" alt="">
                     <h1>Zuzana</h1>
                 </div>
-                <p class="d-block w-100"></p>
+                <p class="d-block w-100">By using INeed, I can find great babysitters that fit my busy lifestyle, and I know my precious boy is safe.</p>
             </div>
         </div>
         <div class="carousel-item">
             <div class="persona">
                 <div class="Guys">
                     <img src="img/Avatars/Guy.jfif" alt="">
-                    <h1>Some Name</h1>
+                    <h1>Pepa</h1>
                 </div>
-                <p class="d-block w-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias debitis, exercitationem doloremque quae at minus sit amet consectetur sit amet consectetur?</p>
+                <p class="d-block w-100">INeed makes maintaining your house a cinch. Instead of spending all weekend cleaning and working in my garden, I can find capable people of helping me.</p>
             </div>
         </div>
         <div class="carousel-item">
             <div class="persona">
                 <div class="Guys">
                     <img src="img/Avatars/guy2.jfif" alt="">
-                    <h1>Some Name</h1>
+                    <h1>Radek</h1>
                 </div>
-                <p class="d-block w-100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis non debitis quis, ut doloremque eveniet. sit amet consectetur sit amet consectetur</p>
+                <p class="d-block w-100">I've been wanting to get back in shape for years, but I never had time to hit the gym. INeed has connected me with dozens of personal trainers who can work on my schedule.</p>
             </div>
         </div>
         <div class="carousel-item">
             <div class="persona">
                 <div class="Guys">
                     <img src="img/Avatars/Mark.jfif" alt="">
-                    <h1>Some Name</h1>
+                    <h1>Mark</h1>
                 </div>
-                <p class="d-block w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, modi. Magnam quod a nemo temporibus sit amet consectetur sit amet consectetur?</p>
+                <p class="d-block w-100">This website's is pretty cool.</p>
             </div>
         </div>
     </div>

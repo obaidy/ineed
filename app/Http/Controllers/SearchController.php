@@ -20,6 +20,6 @@ class SearchController extends Controller
         //$service = $service->slug;
 
         // $service = $serviceList[$service_id - 1];
-        return view('profiles/search', compact('service', 'serviceObject', 'providers'));
+        return view('services/search', compact('service', 'serviceObject', 'providers'));
     }
 }
