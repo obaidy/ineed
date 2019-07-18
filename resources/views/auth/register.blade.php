@@ -1,6 +1,15 @@
 @extends('layouts.ineed')
 
 @section('content')
+<head>
+    <style>
+        .container{
+            margin-top: 145px;
+            margin-bottom: 120px;
+            
+        }
+       
+    </style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
