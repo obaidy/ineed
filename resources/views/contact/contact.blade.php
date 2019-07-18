@@ -39,6 +39,8 @@
         <div class="contact-title">
             <h1>Stay in Touch</h1>
 
+            </div>
+
         <div class="contact-form">
             <form id="contact-form" method="post" action="">
                 <input name="name" type="text" class="form-control" placeholder="Your name" required><br>
@@ -49,7 +51,7 @@
                 <input class="form-control submit" type="submit" value="SEND MESSAGE">
 
             </form>
-        </div>
+        
             
 
         </div>
