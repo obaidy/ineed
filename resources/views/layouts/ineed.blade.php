@@ -15,7 +15,15 @@
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
     <style>
-       
+        html {
+            height: 100vh;
+        }
+        body {
+            height: 100vh;
+        }
+       footer {
+           margin-top: 300px;
+       }
     </style>
 </head>
 <body> 
