@@ -40,13 +40,17 @@
                 <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
             </div>
         @else
-        <div class="dropdown login">
-            <a href="/provider"><img src="./img/login.png" alt=""></a>
+        
+            <div class="dropdown login">
+                <a href="/provider"><img src="./img/login.png" alt=""></a>
+            
         </div>
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" >
-            @csrf
-            <button>Logout</button>
-        </form>
+        <div class='button'>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+                @csrf
+                <button>Logout</button>
+            </form>
+        </div>
         @endguest
     </div>
     <!-- End Top -->

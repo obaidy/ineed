@@ -9,14 +9,14 @@
         <h3>This provider's weekly availability</h3>
         <div class="row">
             <div class="col"></div>
-            <div class='col text-center'>Morning</div>
-            <div class="col text-center">Afternoon</div>
-            <div class="col text-center">Evening</div>
-            <div class="col text-center">All Day</div>
+            <div class='text-white bg-dark ml-1 mb-1 rounded font-weight-bold col text-center'>Morning</div>
+            <div class="text-white bg-dark ml-1 mb-1 rounded font-weight-bold col text-center">Afternoon</div>
+            <div class="text-white bg-dark ml-1 mb-1 rounded font-weight-bold col text-center">Evening</div>
+            <div class="text-white bg-dark ml-1 mb-1 rounded font-weight-bold col text-center">All Day</div>
         </div>
             @foreach ($days_of_week as $day)
                 <div class="row">
-                <div class="col">{{$day}}</div>
+                <div class="text-white bg-dark mb-1 pt-1 rounded font-weight-bold col">{{$day}}</div>
                 @foreach ($times_of_day as $time)
                 
                     {{-- availability iterator. --}}
@@ -43,7 +43,7 @@
     
     <form class='container my-5' action="" method='post'>
         @csrf
-        <h3 class='mb-3'>Request this provider at one of his available times.</h3 class='mb-3'>
+        <h3 class='text-white mb-3'>Request this provider at one of his available times.</h3 class='mb-3'>
         
 
         <div class='form-row'>
