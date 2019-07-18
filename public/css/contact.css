@@ -94,7 +94,7 @@ body {
       position: absolute;
       width: 700px;
       margin-top: 50px;
-      transition: all 4s ease-in-out;
+      transition: all 2s ease-in-out;
   }
 
   .form-control {
@@ -114,7 +114,6 @@ body {
 
   form .submit {
       background: #ff5722;
-      border-color: #fff;
       font-size: 20px;
       font-weight: bold;
       letter-spacing: 2px;
