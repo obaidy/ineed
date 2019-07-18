@@ -24,7 +24,7 @@
         <!-- Logo -->
         <div class="logo">
                 
-                <a href="/"><img src="./img/logo.png" alt=""></a>
+                <a href="/"><img src="{{URL::asset('/img/logo.png')}}" alt=""></a>
         </div>
         <!-- Navbar -->
         <div id="menu-nav">
@@ -40,12 +40,12 @@
         <!-- Log in -->
         @guest
             <div class="login">
-                <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
+                <a href="{{ route('login') }}"><img src="{{URL::asset('/img/login.png')}}" alt=""></a>
             </div>
         @else
         
             <div class="dropdown login">
-                <a href="/provider"><img src="./img/login.png" alt=""></a>
+                <a href="/provider"><img src="{{URL::asset('/img/login.png')}}" alt=""></a>
             
         </div>
         <div class='button'>
