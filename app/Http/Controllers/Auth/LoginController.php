@@ -25,7 +25,15 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    public function redirectTo()
+    {
+        if(auth()->user()->role == 'provider'){
+            return '/provider';
+        }
+        else{
+            return '/categ';
+        }
+    }
 
     /**
      * Create a new controller instance.
