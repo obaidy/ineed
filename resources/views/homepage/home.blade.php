@@ -111,10 +111,12 @@
 </div>
 
 <!-- Register -->
-@guest
+
+
 <div class="registerTitle">
     <h3>Create an account</h3>
 </div>
+
 
 <div class="register">
     @if (Route::has('register'))
@@ -137,7 +139,7 @@
         </a>
     @endif
 </div>
-@endguest
+
 
 <!-- Footer -->
 

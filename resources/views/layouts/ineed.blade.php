@@ -53,7 +53,7 @@
     <!-- Footer -->
 
 <footer>
-        <div class="footer-copyright text-center py-3" >© 2019 Copyright:
+        <div class="footer-copyright sticky-footer text-center py-3" >© 2019 Copyright:
             <a href="/"> iNeed</a>
       </div>
     </footer>

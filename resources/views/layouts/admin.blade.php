@@ -645,11 +645,10 @@
                       @endif
                   @endforeach
               </select>
-            
-             
-            
-        
        </fieldset>
+       <legend>Set your hourly price (in CZK)</legend>
+       <input type="number" value=''>
+
           <legend>Availability</legend>
           
               <div class="container">Confirm your weekly availability
