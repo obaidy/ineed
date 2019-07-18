@@ -10,7 +10,7 @@
     </div>
 
     <div class="container my-5 w-50">
-        <h3 class='text-white bg-dark text-center rounded'>This provider's weekly availability</h3>
+        <h3 class='text-white bg-dark text-center rounded'>My weekly availability</h3>
         <div class="row">
             <div class="col"></div>
             <div class='text-white bg-dark ml-1 mb-1 rounded font-weight-bold col text-center'>Morning</div>
@@ -47,7 +47,7 @@
     
     <form class='container my-5' action="" method='post'>
         @csrf
-        <h3 class='text-white bg-dark  p-2 rounded mb-3 text-center'>Request this provider at one of his available times.</h3 class='mb-3'>
+        <h3 class='text-white bg-dark  p-2 rounded mb-3 text-center'>Request me at one of my available times.</h3 class='mb-3'>
         
 
         <div class='form-row'>
@@ -102,7 +102,7 @@
     </form>
     
     <div class='container'>
-        <h2 class="reviews">Reviews</h2>
+        <h2 class="reviews text-white bg-dark  p-2 rounded mb-3 text-center">Reviews</h2>
         @foreach ($reviews as $review)
             <div class="card review">
 
