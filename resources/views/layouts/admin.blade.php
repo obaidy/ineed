@@ -57,6 +57,12 @@
               <span>Categories</span></a>
           </li>
 
+          <li class="nav-item active">
+            <a class="nav-link" href="/jobs">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span>My Requests</span></a>
+          </li>
+
       <!-- Divider -->
       <!-- <hr class="sidebar-divider"> -->
 
@@ -681,37 +687,7 @@
                 </div>
                   <br>
               @endforeach
-              </div>
-              <fieldset>
-                <legend>Availability</legend>
-                <p> 
-             <select id = "myList">
-               <option value = "Monday">Monday</option>
-               <option value = "Tuseday">Tuseday</option>
-               <option value = "Wednesday">Wednesday</option>
-               <option value = "Thursday">Thursday</option>
-               <option value = "Friday">Friday</option>
-               <option value = "Saturday">Saturday</option>
-               <option value = "Sunday">Sunday</option>
-                              
-             </select>
-            </p>
-          
-       </fieldset>
-       <form>
-        <fieldset>
-           <legend>When</legend>
-           <p>
-              <select id = "myList">
-                <option value = "Morning">Morning</option>
-                <option value = "Afternoon">Afternoon</option>
-                <option value = "Evening">Evening</option>
-                <option value = "All-Day">All-Day</option>
- 
-                               
-              </select>
-           </p>
-        </fieldset>
+              
        
       <fieldset>
 
