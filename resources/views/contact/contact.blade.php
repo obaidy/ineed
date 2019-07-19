@@ -38,9 +38,16 @@
                 <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
             </div>
         @else
-            <div class="dropdown login">
-                <a href="/provider"><img src="./img/login.png" alt=""></a>
-            </div>
+        @if (auth()->user()->role== 'user')
+        <div class="dropdown login">
+            <a href="/jobs"><img src="./img/login.png" alt=""></a>
+        </div>
+    @endif
+    @if (auth()->user()->role== 'provider')
+        <div class="dropdown login">
+            <a href="/provider"><img src="./img/login.png" alt=""></a>
+        </div>
+    @endif
             <div class="button">
             <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                 @csrf
