@@ -653,7 +653,7 @@
               </select>
        </fieldset>
        <legend>Set your hourly price (in CZK)</legend>
-       <input type="number" value=''>
+      <input type="text" name='wage' value='{{$user->wage}}'>
 
           <legend>Availability</legend>
           
