@@ -126,6 +126,21 @@ li {
     margin-top: 20px;
 }
 
+.button{
+  float: right;
+  position: relative;
+  right: 0px;
+  margin-top: 20px;
+  margin-right: -35px;
+}
+
+button{
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+  background-color: #639cddc5;
+  border: 1px solid white;
+}
+
 
 /* Footer */
 

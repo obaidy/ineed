@@ -30,6 +30,7 @@ class ProviderController extends Controller
         foreach ($days_available as $key => $day_available) {
             $full_availability[] = $day_available . '-' . $hours_available[$key];
         }
+        
         $new_requests = \App\Service_Request::where('provider_id', $user->id)->where('is_accepted', null)->get();
         $upcoming_requests = \App\Service_Request::where('provider_id', $user->id)->where('is_accepted', true)->get();
         $categories = \App\Category::all();
@@ -88,7 +89,7 @@ class ProviderController extends Controller
                 }
             }
             //delete times provider is no longer available.
-
+            $provider->wage = $request->wage;
             $provider->description = $request->description;
             $provider->category_id = $request->category;
             $provider->save();

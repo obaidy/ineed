@@ -31,7 +31,7 @@ class LoginController extends Controller
             return '/provider';
         }
         else{
-            return '/categ';
+            return '/jobs';
         }
     }
 
