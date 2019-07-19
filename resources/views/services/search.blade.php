@@ -17,9 +17,9 @@
         .container {
             display: flex;
             flex-direction: column;
-            background-color: rgba(255, 255, 255, 0.805);
+            background-color: rgba(255, 255, 255, 0.90);
             margin-top: 25px;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             margin-left: auto;
             margin-right: auto;
             width: 60%;

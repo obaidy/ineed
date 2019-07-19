@@ -22,7 +22,7 @@
             height: 100vh;
         }
        footer {
-           margin-top: 300px;
+           margin-top: 200px;
        }
     </style>
 </head>
@@ -48,17 +48,17 @@
         <!-- Log in -->
         @guest
             <div class="login">
-                <a href="{{ route('login') }}"><img src="{{URL::asset('/img/login.png')}}" alt=""></a>
+                <a href="{{ route('login') }}"><img src="{{URL::asset('img/login.png')}}" alt=""></a>
             </div>
         @else
         @if (auth()->user()->role== 'user')
         <div class="dropdown login">
-            <a href="/jobs"><img src="./img/login.png" alt=""></a>
+            <a href="/jobs"><img src="{{URL::asset('img/login.png')}}" alt=""></a>
             </div>
         @endif
         @if (auth()->user()->role== 'provider')
             <div class="dropdown login">
-                <a href="/provider"><img src="./img/login.png" alt=""></a>
+                <a href="/provider"><img src="{{URL::asset('img/login.png')}}" alt=""></a>
             </div>
         @endif
         </div>
