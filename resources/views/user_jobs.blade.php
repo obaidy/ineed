@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <div class="upcoming container mt-5">
     <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center mt-5'>These requests you made have been accepted and are coming up soon</h2>
     @foreach ($service_requests as $requests)

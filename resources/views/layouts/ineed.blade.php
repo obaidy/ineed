@@ -22,7 +22,7 @@
             height: 100vh;
         }
        footer {
-           margin-top: 200px;
+           margin-top: 400px;
        }
     </style>
 </head>
