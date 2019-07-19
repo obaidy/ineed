@@ -5,7 +5,7 @@
     <style>
         .service {
             text-align: center;
-            width: 200px;
+            width: 250px;
             margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
