@@ -34,7 +34,7 @@
         </div>
         <!-- Log in -->
         <div class="login">
-            <a href="#"><img src="./img/login.png" alt=""></a>
+            <a href="{{ route('login') }}"><img src="./img/login.png" alt=""></a>
         </div>
     </div>
     <!-- End Top -->
