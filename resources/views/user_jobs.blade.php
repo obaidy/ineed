@@ -5,7 +5,7 @@
 <div class="upcoming container mt-5">
     <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center mt-5'>These requests you made have been accepted and are coming up soon</h2>
     @foreach ($service_requests as $requests)
-        <div class="row font-weight-bold job">
+        <div class="row bg-white rounded font-weight-bold job">
             <div class="col provider">{{$requests->provider_name}}</div>
               @php
                   $unix_time = strtotime($requests->service_date.' '.$requests->service_time);
@@ -20,13 +20,13 @@
         </div>
     @endforeach
 </div>
-@if (empty($service_denied))
+
 
     
 <div class="denied container mt-5">
         <h2 class='text-white bg-dark  p-2 rounded mb-3 text-center'>Unfortunately, these requests of yours have been denied</h2>
         @foreach ($service_denied as $denied)
-            <div class="row font-weight-bold job">
+            <div class="row bg-white rounded font-weight-bold job">
                 <div class="col provider">{{$denied->provider_name}}</div>
                   @php
                       $unix_time = strtotime($denied->service_date.' '.$denied->service_time);
@@ -40,7 +40,7 @@
             </div>
         @endforeach
     </div>
-@endif
+
 
 
 <div class="finished container mt-5">
