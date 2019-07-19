@@ -59,7 +59,7 @@
     <!-- Carousel review -->
 
 <div class="review-title">
-    <h3>Our users reviews</h3>
+    <h3>Our users' reviews</h3>
 </div>
 
 <div id="reviews" class="carousel slide" data-ride="carousel">
@@ -106,7 +106,7 @@
                     <img src="img/Avatars/Mark.jfif" alt="">
                     <h1>Mark</h1>
                 </div>
-                <p class="d-block w-100">This website's is pretty cool.</p>
+                <p class="d-block w-100">This website's pretty cool.</p>
             </div>
         </div>
     </div>
